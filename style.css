@@ -1,1 +1,37 @@
 @charset "utf-8";
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+
+}
+
+.hamburger_menu {
+
+}
+
+.hamburger_menu div {
+    width: 25px;
+    height: 3px;
+    background-color: gray;
+    margin: 3px;
+    transition: all, 0.4s, ease;
+}
+
+/* Classes for java script */
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-3px, 6px);
+}
+
+.toggle .line2{
+    opacity: 0;
+}
+
+.toggle .line3{
+    transform: rotate(45deg) translate(-3px, -6px);
+}
