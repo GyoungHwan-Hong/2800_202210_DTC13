@@ -35,3 +35,15 @@ nav {
 .toggle .line3{
     transform: rotate(45deg) translate(-3px, -6px);
 }
+
+#head_section {
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+}
+
+.img_container {
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+}
