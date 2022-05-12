@@ -25,12 +25,12 @@
     </nav>
     <div>
         <div class="category">
-            <button type="button" id="category_items">Today</button>
-            <button type="button" id="category_items">Weekly</button>
-            <button type="button" id="category_items">Monthly</button>
+            <button type="button" id="category_items" onclick="Trendy_contents_change_Today()">Today</button>
+            <button type="button" id="category_items" onclick="Trendy_contents_change_Weekly()">Weekly</button>
+            <button type="button" id="category_items" onclick="Trendy_contents_change_Monthly()">Monthly</button>
         </div>
     </div>
-    <ol>
+    <ol id="Trendy_Food_List">
         <li>Kimchi Fried Rice</li>
         <li>Curry rice</li>
         <li>Pasta</li>
@@ -49,5 +49,4 @@
 </body>
 
 <script src="app.js"></script>
-
 </html>

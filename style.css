@@ -2,6 +2,7 @@
 
 body {
     background-color: white;
+    margin: 20px;
 }
 
 h2 {
@@ -103,4 +104,11 @@ ol {
     margin-left: 20px;
     margin-right: 20px;
     font-size: 15px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    color:black;
+    align-content: center;
 }
