@@ -14,7 +14,7 @@ nav {
     align-items: center;
 }
 
-.hamburger_menu div {
+.burger {
     width: 25px;
     height: 3px;
     background-color: gray;

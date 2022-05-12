@@ -1,7 +1,7 @@
 const button=()=> {
     const burger = document.querySelector('.hamburger_menu');
     burger.addEventListener('click',()=>{
-        burger.classList.toggle('toggel');
+        burger.classList.toggle('toggle');
     });
 }
 
