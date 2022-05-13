@@ -55,11 +55,36 @@ nav {
     flex-direction: column;
     width: 100%;
     align-items: center;
+
+}
+
+.logo_img {
+    width: 50px;
+    height: 50px;
 }
 
 #imgbox {
+    width: 100%;
+    vertical-align: middle;
     padding: auto;
     margin: 5px;
+    position: relative;
+    margin: 10px auto;
+    width: 100%;
+    text-align: center;
+}
+
+#textOnImage {
+    margin: 5px;
+    padding: 5px 10px;
+	background-color: gray;
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+    transform: translate( -50%, -50% );
+    color: white;
+    font-weight: bold;
 }
 
 .category {
