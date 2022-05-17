@@ -21,21 +21,11 @@
     <!-- Google Icons (Material Design)-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <!-- Firebase 8 CDNs-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
-    </script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+   
 
  
 
-    <!-- CDN-->
-    <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
-    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
+
 
   
 
@@ -44,7 +34,7 @@
 .nav-pills .show>.nav-link {
     /* font colour and background colour of the selected tab */
     color: white;
-    background-color: rgb(136, 220, 241);
+    background-color: wheat;
     border-radius: 1em;
     margin-top: 3%;
     margin-bottom: 3%;
@@ -63,7 +53,7 @@
 
 .bg-primary {
     /*Navbar*/
-    background-color: #247BA0 !important;
+    background-color: #FFA45B !important;
     border-bottom: 2px solid rgb(136, 220, 241) !important;
 }
 
@@ -74,7 +64,7 @@
     font-size: 1.25rem;
     text-decoration: none;
     white-space: nowrap;
-    color: white !important;
+    color: rgb(0, 0, 0) !important;
 }
 
 
@@ -82,21 +72,21 @@
 .card-body {
     flex: 1 1 auto;
     padding: 1rem 1rem;
-    background-color: #247BA0 !important;
+    background-color: #FFDA77 !important;
     /* Changes color of the cards background in main page */
     border: 1px solid rgb(136, 220, 241);
     border-radius: 1em !important;
-    color: white;
+    color: #000000;
 }
 
 .card-title,
 .card-text {
-    color: rgb(255, 255, 255) !important;
+    color: #020202(255, 255, 255) !important;
     /* Changes font color in cards */
 }
 
 body {
-    background-color: #aabce4;
+    background-color: #AEE6E6;
     color: #FFFAFF;
 }
 
@@ -136,6 +126,7 @@ a {
     margin-left: 5%;
     margin-right: 5%;
     padding: 0;
+    font-size: larger;
 }
 
 .recify {
@@ -161,6 +152,7 @@ a {
 
 .card-body {
     border-radius: 20px !important;
+    font-size: larger;
 }
 
 .card {
@@ -174,8 +166,8 @@ h1 {
     color: #000;
 }
 
-h5 {
-    margin-top: 10%;
+h3 {
+    margin-top: 8%;
 }
 
     </style>
@@ -187,7 +179,7 @@ h5 {
     <nav class="navbar navbar-expand-lg navbar-light bg-primary" id="navbar">
         <div class="container-fluid">
             <span class="navbar-brand">Recify</span>
-            <a href="htmls/profile.html"><img class="bi-window text-primary" id="profile" 
+            <a href="#"><img class="bi-window text-primary" id="profile" 
                     alt="..."></a>
 
         </div>
@@ -195,7 +187,7 @@ h5 {
 
     <div class="container-fluid bg p-4">
 
-        <h1 class="display-4">Good morning, User <span id="name-goes-here2"></span></h1>
+        <h1 class="display-4">Good morning,  <span id="name-goes-here2"></span></h1>
         <hr>
     
 
@@ -204,28 +196,28 @@ h5 {
     <section class="main-cards">
         <div class="card recify" style="border: none;">
             <a class="card-body btn">
-                <h5 class="card-title">Recify</h5>
+                <h3 class="card-title">Recify</h3>
                 <p class="card-text">Search recipes based on your ingredients.</p>
             </a>
         </div>
 
         <div class="card popular" style="border: none;">
             <a class="card-body btn">
-                <h5 class="card-title">View popular recipes</h5>
+                <h3 class="card-title">View Popular Recipes</h3>
                 <p class="card-text">View our user's favourite recipes</p>
             </a>
         </div>
 
         <div class="card favourites" style="border: none;">
             <a class="card-body btn">
-                <h5 class="card-title">Favourites</h5>
+                <h3 class="card-title">Favourites</h3>
                 <p class="card-text">View your recipes you saved for later.</p>
             </a>
         </div>
 
         <div class="card settings" style="border: none;">
             <a class="card-body btn">
-                <h5 class="card-title">Settings</h5>
+                <h3 class="card-title">Settings</h3>
                 <p class="card-text"></p>
             </a>
         </div>
