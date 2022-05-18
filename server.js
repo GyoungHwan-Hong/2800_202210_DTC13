@@ -20,9 +20,12 @@ app.listen(process.env.PORT || 5000, function (err) {
 app.use(express.static('./public'));
 
 
+app.use('/css', express.static(__dirname + 'public/css'))
+
+
 app.use('/recipe/:id', function (req, res) {
 
-    const url = `https://api.spoonacular.com/recipes/${req.params.id}/information?apiKey=598dbdb711b34618b52ffcd93f1e1104&includeNutrition=false`
+    const url = `https://api.spoonacular.com/recipes/${req.params.id}/information?apiKey=44bee3db3d864814b2a115572ee2f5f4&includeNutrition=false`
     data = ""
 
     https.get(url, function (https_res) {
