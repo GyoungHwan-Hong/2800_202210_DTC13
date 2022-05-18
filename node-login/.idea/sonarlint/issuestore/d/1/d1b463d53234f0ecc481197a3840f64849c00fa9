@@ -1,0 +1,19 @@
+
+Tjavascript:S1481"3Remove the declaration of the unused 'lc' variable.(ü¤Ò þÿÿÿÿ
+Qjavascript:S1854"0Remove this useless assignment to variable "lc".(ü¤Ò þÿÿÿÿ
+„javascript:S1172
+"cRemove the unused function parameter "jqForm" or rename it to "_jqForm" to make intention explicit.(åÒ¿ýýÿÿÿÿ
+†javascript:S1172
+"eRemove the unused function parameter "options" or rename it to "_options" to make intention explicit.(åÒ¿ýýÿÿÿÿ
+Hjavascript:S1125"'Remove the unnecessary boolean literal.(¿²üéüÿÿÿÿ
+‹javascript:S1172"oRemove the unused function parameter "responseText" or rename it to "_responseText" to make intention explicit.(Ë¾¾Ð
+yjavascript:S1172"]Remove the unused function parameter "xhr" or rename it to "_xhr" to make intention explicit.(Ë¾¾Ð
+}javascript:S1172"aRemove the unused function parameter "$form" or rename it to "_$form" to make intention explicit.(Ë¾¾Ð
+ujavascript:S1172"YRemove the unused function parameter "e" or rename it to "_e" to make intention explicit.(ùÅ”±
+ˆjavascript:S1172-"gRemove the unused function parameter "formData" or rename it to "_formData" to make intention explicit.(åÒ¿ýýÿÿÿÿ
+„javascript:S1172-"cRemove the unused function parameter "jqForm" or rename it to "_jqForm" to make intention explicit.(åÒ¿ýýÿÿÿÿ
+†javascript:S1172-"eRemove the unused function parameter "options" or rename it to "_options" to make intention explicit.(åÒ¿ýýÿÿÿÿ
+‹javascript:S11726"oRemove the unused function parameter "responseText" or rename it to "_responseText" to make intention explicit.(Ë¾¾Ð
+javascript:S11726"cRemove the unused function parameter "status" or rename it to "_status" to make intention explicit.(Ë¾¾Ð
+yjavascript:S11726"]Remove the unused function parameter "xhr" or rename it to "_xhr" to make intention explicit.(Ë¾¾Ð
+}javascript:S11726"aRemove the unused function parameter "$form" or rename it to "_$form" to make intention explicit.(Ë¾¾Ð
