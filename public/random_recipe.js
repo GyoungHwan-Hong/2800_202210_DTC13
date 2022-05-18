@@ -19,6 +19,7 @@ function processDisplay(data) {
                 <div class="recipe_img_box">
                 <img src="${data.recipes[i].image}" style="max-width: 100%; height: auto;">
                 <p>${data.recipes[i].title} </p>
+                <br>
                 </div>
                 `
 
