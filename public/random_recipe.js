@@ -6,20 +6,25 @@ function processDisplay(data) {
 
     console.log(data);
 
-
-
     for (i = 0; i < data.recipes.length; i++) {
+        
+        console.log(i);
+        
+        if (i % 2 == 0) {
+            to_add += `<div class='recipes_container'>`
+        }
 
-    to_add +=
-    `
-     <div class="img_box">
-         <img src="${data.recipes[i].image}">
-         <p>${data.recipes[i].title} </p>
-     </div>
-     `
+        to_add +=
+            `
+                <div class="recipe_img_box">
+                <img src="${data.recipes[i].image}" style="max-width: 100%; height: auto;">
+                <p>${data.recipes[i].title} </p>
+                </div>
+                `
 
-    console.log(data.recipes[i].image);
-    console.log(i);
+        if (i % 2 == 1) {
+            to_add += `</div>`
+        }
     }
 
     $("main").html(to_add)
