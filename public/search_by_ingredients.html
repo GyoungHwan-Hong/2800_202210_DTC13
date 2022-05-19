@@ -22,9 +22,37 @@
             <div class="line3"></div>
         </div>
     </nav>
-    <h3>Insert your ingredients here</h3>
-    <h2>Recify!</h2>
-    <h3>Buttons go here</h3>
+
+
+    <!-- Search form (from w3 school how-to contact form) -->
+
+    <div class="container">
+        <form action="action_page.php">
+      
+          <label for="firstItem">First Ingredient</label>
+          <input type="text" id="firstItem" name="firstItem" placeholder="Kimchi">
+      
+          <label for="secondItem">Second Ingredient</label>
+          <input type="text" id="secondItem" name="secondItem" placeholder="Rice">
+
+          <label for="thirdItem">Third Ingredient</label>
+          <input type="text" id="thirdItem" name="thirdItem" placeholder="Eggs">
+      
+          <label for="cuisineStyle">Cuisine Style</label>
+          <select id="cuisineStyle" name="cuisineStyle">
+            <option value="Korean">Korean</option>
+            <option value="Canadian">Canadian</option>
+            <option value="Chinese">Chinese</option>
+            <option value="Indian">Indian</option>
+            <option value="French">French</option>
+            <option value="Japanese">Japanese</option>
+
+          </select>
+           
+          <input type="submit" value="Submit">
+      
+        </form>
+      </div>
 
     <!-- footer -->
     <footer>
