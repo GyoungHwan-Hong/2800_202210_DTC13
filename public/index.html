@@ -1,66 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<head>
     <title>Recify</title>
-    <link rel="stylesheet" tyep="text/css" href="style.css">
+
+    <meta name="COMP2800-DTC-13" content="Recify">
+
+    <!------------------------>
+    <!-- Required meta tags -->
+    <!------------------------>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!------------------------------------------>
+    <!-- Bootstrap Library CSS JS CDN go here -->
+    <!------------------------------------------>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+    <!-------------------------------------------->
+    <!-- Other libraries and styles of your own -->
+    <!-------------------------------------------->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" tyep="text/css" href="./styles/landing.css">
+
+
 </head>
 
 <body>
-    <nav>
-        <div class="logo">
-            <img class="logo_img" src="img/logo.png" onclick="location.href='index.html'">
-        </div>
-        <div class="logo2">
-            <h2>Recify</h2>
-        </div>
-        <div class="burger">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand">Recify</a>
         </div>
     </nav>
-    <div id="main_contents_container">
-        <div id="imgbox">
-            <img src="https://picsum.photos/id/4/370/400">
-            <div id="textOnImage" onclick="location.href='search_page.html'">Welcome Back, 
-                User !
-            </div>
-        </div>
-        <div class="img_container">
-            <div id="imgbox">
-                <img src="https://picsum.photos/id/232/180/180">
-                <div id="textOnImage" onclick="location.href='random.html'">Get random 10 recipes!</div>
-            </div>
-            <div id="imgbox">
-                <img src="https://picsum.photos/id/6/180/180">
-                <div id="textOnImage" onclick="location.href='trendy.html'">Trendy Foods</div>
-            </div>
-        </div>
-        <div class="img_container">
-            <div id="imgbox">
-                <img src="https://picsum.photos/id/423/180/180">
-                <div id="textOnImage">Menu C</div>
-            </div>
-            <div id="imgbox">
-                <img src="https://picsum.photos/id/343/180/180">
-                <div id="textOnImage">Menu D</div>
+
+    <div class="px-4 py-5 my-5 text-center">
+        <img class="d-block mx-auto mb-4" src="#" alt="" width="72">
+        <h1 class="display-5 fw-bold">Welcome to Recify</h1>
+        <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4">DTC-13 is developing a web application project, which is called Recify,
+                that aims to help young adults come up with creative recipes to use for the ingredients
+                that are near the expiration date.</p>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                <a class="btn btn-primary" href="#" role="button">Login or Signup</a>
             </div>
         </div>
     </div>
 
-    <footer>
-        <div id="footer_containter">
-            <h5>
-                Copyright © Your Website 2022
-            </h5>
+    <section class="features-icons text-center shadow-lg p-3 mb-5 bg-body rounded">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                        <div class="features-icons-icon d-flex">
+                            <img class="bi-window m-auto text-primary" src="./images/Screenshot_1.jpg" alt="...">
+                        </div>
+                        <h3>Find Recipes</h3>
+                        <p class="lead mb-0">Search for recipes by specific ingredients.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                        <div class="features-icons-icon d-flex">
+                            <img class="bi-window m-auto text-primary" src="./images/Screenshot_2.jpg" alt="...">
+                        </div>
+                        <h3>Random Recipes</h3>
+                        <p class="lead mb-0">Looking for something new? Search through our database for random recipes.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+                        <div class="features-icons-icon d-flex">
+                            <img class="bi-window m-auto text-primary" src="./images/Screenshot_3.jpg" alt="...">
+                        </div>
+                        <h3>Popular Recipes</h3>
+                        <p class="lead mb-0">View the most popular recipes on our application.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </footer>
+    </section>
 
-    <script src="app.js"></script>
+
 </body>
 
 </html>
