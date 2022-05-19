@@ -1,11 +1,15 @@
 const express = require('express');
 const req = require('express/lib/request');
 const res = require('express/lib/response');
+var session = require('express-session');
 const app = express();
+
 const https = require('https');
 const bodyparser = require("body-parser");
-var ejs = require("ejs");
+const bcrypt = require('bcrypt');
 
+
+var ejs = require("ejs");
 app.set("view engine", "ejs"); 
 app.engine("ejs", ejs.renderFile);
 
@@ -15,6 +19,13 @@ app.use(bodyparser.urlencoded({
     limit: '50mb',
     extended: true
 }))
+
+app.use(session({
+    secret: "SECRET",
+    saveUninitialized: true,
+    resave: true
+}));
+
 
 
 app.set('view engine', 'ejs');

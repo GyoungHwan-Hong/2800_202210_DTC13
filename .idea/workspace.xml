@@ -33,12 +33,18 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File" value="HTML" />
     <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/img" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\bryan\PythonProjects\2800_202210_DTC13\public\img" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\bryan\PythonProjects\2800_202210_DTC13\public\img" />
+      <recent name="C:\Users\bryan\PythonProjects\2800_202210_DTC13\public\styles" />
+      <recent name="C:\Users\bryan\PythonProjects\2800_202210_DTC13\public\javascript" />
       <recent name="C:\Users\bryan\PythonProjects\2800_202210_DTC13\public" />
       <recent name="C:\Users\bryan\PythonProjects\2800_202210_DTC13" />
-      <recent name="C:\Users\bryan\PythonProjects\2800_202210_DTC13\public\styles" />
     </key>
   </component>
   <component name="TaskManager">
