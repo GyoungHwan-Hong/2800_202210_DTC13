@@ -28,6 +28,12 @@ module.exports = function(app) {
 		}
 	});
 
+
+
+
+
+
+
 	app.post('/', function(req, res){
 		accounts.manualLogin(req.body['user'], req.body['pass'], function(e, o){
 			if (!o){
