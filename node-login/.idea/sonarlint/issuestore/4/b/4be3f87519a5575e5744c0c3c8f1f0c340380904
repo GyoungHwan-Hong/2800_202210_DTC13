@@ -1,0 +1,11 @@
+
+ˆjavascript:S1172"gRemove the unused function parameter "formData" or rename it to "_formData" to make intention explicit.(½Î¬¨ûÿÿÿÿ
+„javascript:S1172"cRemove the unused function parameter "jqForm" or rename it to "_jqForm" to make intention explicit.(½Î¬¨ûÿÿÿÿ
+†javascript:S1172"eRemove the unused function parameter "options" or rename it to "_options" to make intention explicit.(½Î¬¨ûÿÿÿÿ
+7javascript:S1116"Unnecessary semicolon.(½Î¬¨ûÿÿÿÿ
+Xjavascript:S1126	"<Replace this if-then-else flow by a single return statement.(ŽøþÚ
+Cjavascript:S1125	"'Remove the unnecessary boolean literal.(ŽøþÚ
+‹javascript:S1172"oRemove the unused function parameter "responseText" or rename it to "_responseText" to make intention explicit.(Ë¾¾Ð
+javascript:S1172"cRemove the unused function parameter "status" or rename it to "_status" to make intention explicit.(Ë¾¾Ð
+yjavascript:S1172"]Remove the unused function parameter "xhr" or rename it to "_xhr" to make intention explicit.(Ë¾¾Ð
+}javascript:S1172"aRemove the unused function parameter "$form" or rename it to "_$form" to make intention explicit.(Ë¾¾Ð
