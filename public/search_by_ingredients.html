@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/search_ingredients.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Recify Search By Ingredients</title>
+</head>
+<body>
+    <!-- nav -->
+    <nav>
+        <div class="logo">
+            <img class="logo_img" src="/img/logo.png" onclick="location.href='index.html'">
+        </div>
+        <div class="logo2">
+            <h2>Recify</h2>
+        </div>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+
+    <!-- Search form (from w3 school how-to contact form) -->
+
+    <div class="container">      
+          <label for="firstItem">First Ingredient</label>
+          <input type="text" id="firstItem" name="firstItem" placeholder="Kimchi">
+      
+          <label for="secondItem">Second Ingredient</label>
+          <input type="text" id="secondItem" name="secondItem" placeholder="Rice">
+
+          <label for="thirdItem">Third Ingredient</label>
+          <input type="text" id="thirdItem" name="thirdItem" placeholder="Eggs">
+      
+          <label for="cuisineStyle">Cuisine Style</label>
+          <select id="cuisineStyle" name="cuisineStyle">
+            <option value="Korean">Korean</option>
+            <option value="Canadian">Canadian</option>
+            <option value="Chinese">Chinese</option>
+            <option value="Indian">Indian</option>
+            <option value="French">French</option>
+            <option value="Japanese">Japanese</option>
+
+          </select>
+           
+          <button id="submit">Search</button>
+      
+        </form>
+      </div>
+
+    <!-- results go here -->
+
+    <results>
+        
+    </results>
+
+    <!-- footer -->
+    <footer>
+        <div id="footer_containter">
+            <h5>
+                Copyright © Your Website 2022
+            </h5>
+        </div>
+    </footer>
+
+    <!-- js -->
+    <script src="/js/search_by_ingredients.js"></script>
+
+</body>
+</html>
