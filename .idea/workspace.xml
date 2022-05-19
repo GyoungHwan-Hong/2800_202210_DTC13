@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="618033b9-8868-4aef-9d4c-3a6608a5c635" name="Changes" comment="" />
+    <list default="true" id="618033b9-8868-4aef-9d4c-3a6608a5c635" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/recipe.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/recipe.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/recipe.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/recipe.ejs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
