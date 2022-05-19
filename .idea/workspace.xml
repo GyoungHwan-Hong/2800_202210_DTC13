@@ -19,7 +19,11 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+<<<<<<< HEAD
   <component name="ProjectId" id="29OvcPDxWX8SytE9t5JUfRXIC8A" />
+=======
+  <component name="ProjectId" id="29OO59hfzkcqYjxi71kNQHZFG6d" />
+>>>>>>> decb6d6360086b4792bab63352ee3d3c7d175cbc
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -34,10 +38,17 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="618033b9-8868-4aef-9d4c-3a6608a5c635" name="Changes" comment="" />
+<<<<<<< HEAD
       <created>1652997024898</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1652997024898</updated>
+=======
+      <created>1652980480197</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1652980480197</updated>
+>>>>>>> decb6d6360086b4792bab63352ee3d3c7d175cbc
     </task>
     <servers />
   </component>
