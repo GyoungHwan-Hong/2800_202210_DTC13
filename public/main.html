@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Recify</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+
+    <style>
+        .bg-primary {
+            /*Navbar*/
+            background-color: #22577A !important;
+            border-bottom: 5px solid #38A3A5 !important;
+        }
+
+        .navbar-brand {
+            padding-top: 0.3125rem;
+            padding-bottom: 0.3125rem;
+            margin-right: 1rem;
+            font-size: 1.25rem;
+            text-decoration: none;
+            white-space: nowrap;
+            color: #C7F9CC !important;
+        }
+
+
+
+        .card-body {
+            flex: 1 1 auto;
+            padding: 1rem 1rem;
+            background-color: #57CC99 !important;
+            /* Changes color of the cards background in main page */
+            border: 3px solid #38A3A5;
+            border-radius: 1em !important;
+            color: #22577A;
+        }
+
+
+        body {
+            background-color: #C7F9CC;
+            color: black;
+        }
+
+
+        .card {
+
+            color: black !important;
+            background-color: transparent;
+            border: 0px;
+            padding: 0px;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .btn-lg {
+            background-color: rgb(136, 220, 241) !important;
+            color: #1D3461 !important;
+        }
+
+
+        .p-4 {
+            padding: 1em !important;
+        }
+
+        .main-cards {
+            display: grid;
+            grid-template-columns: 47.5% 47.5%;
+            grid-template-rows: 50% 50%;
+            column-gap: 5%;
+            row-gap: 15px;
+            width: 90%;
+            height: 50vh;
+            margin-top: 2%;
+            margin-left: 5%;
+            margin-right: 5%;
+            padding: 0;
+            font-size: larger;
+        }
+
+        .recify {
+            grid-column: 1 / span 1;
+            grid-row: 1 / span 1;
+
+        }
+
+        .popular {
+            grid-column: 2 / span 1;
+            grid-row: 1 / span 1;
+        }
+
+        .favourites {
+            grid-column: 1 / span 1;
+            grid-row: 2 / span 1;
+        }
+
+        .settings {
+            grid-column: 2 / span 1;
+            grid-row: 2 / span 1;
+        }
+
+        .card-body {
+            border-radius: 20px !important;
+            font-size: large;
+        }
+
+        .card {
+            width: 100%;
+            height: 100%;
+            margin: auto;
+            border-radius: 20px !important;
+        }
+
+        h1 {
+            color: #22577A;
+            
+        }
+
+        h3 {
+            margin-top: 8%;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 0px;
+        }
+
+        #footer_image {
+           
+           height: 100%;
+           width: 10%;
+       }
+
+    </style>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary" id="navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand"> <img src="img/logo2.png" alt="" width="10%" height="10%" class="d-inline-block align-text-top">
+                Recify </a>
+            
+
+        </div>
+    </nav>
+
+    <div class="container-fluid bg p-4">
+
+        <h1 class="display-4 fw-bold">Good morning, <span id="name-goes-here2"></span></h1>
+        <hr>
+
+
+    </div>
+
+    <section class="main-cards">
+        <div class="card recify" style="border: none;">
+            <a class="card-body btn" href="search_by_ingredients.html">
+                <h3 class="card-title">Recify</h3>
+                <p class="card-text">Search recipes based on your ingredients.</p>
+            </a>
+        </div>
+
+        <div class="card popular" style="border: none;">
+            <a class="card-body btn" href="trendy.html">
+                <h3 class="card-title">View Popular Recipes</h3>
+                <p class="card-text">View our user's favourite recipes</p>
+            </a>
+        </div>
+
+        <div class="card favourites" style="border: none;">
+            <a class="card-body btn" href="random.html">
+                <h3 class="card-title">Random</h3>
+                <p class="card-text">Get a bunch of random recipes for you to try out!</p>
+            </a>
+        </div>
+
+        <div class="card settings" style="border: none;">
+            <a class="card-body btn">
+                <h3 class="card-title">Settings</h3>
+                <p class="card-text"></p>
+            </a>
+        </div>
+    </section>
+
+
+    <div class="container align-content-end footer">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+          <div class="col-md-4 d-flex align-items-center">
+            <a href="/" id="footer_image" class="text-muted text-decoration-none lh-1">
+                <img src="img/logo.png" alt="" width="80%" height="10%" class="d-inline-block align-text-top">
+            </a>
+            <span class="text">© 2022 Company, Inc</span>
+          </div>
+      
+          <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+            <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+            <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+            <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+          </ul>
+        </footer>
+      </div>
+
+
+
+</body>
+
+</html>

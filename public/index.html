@@ -1,64 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<head>
     <title>Recify</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+    <style>
+
+        .bg-primary {
+            /*Navbar*/
+            background-color: #22577A !important;
+            border-bottom: 5px solid #38A3A5 !important;
+        }
+
+        .navbar-brand {
+            padding-top: 0.3125rem;
+            padding-bottom: 0.3125rem;
+            margin-right: 1rem;
+            font-size: 1.25rem;
+            text-decoration: none;
+            white-space: nowrap;
+            color: #C7F9CC !important;
+        }
+
+        body {
+            background-color: #C7F9CC;
+            color: black;
+        }
+
+
+        .btn-primary {
+            background-color: #80ED99;
+            color: #22577A;
+            border: 2px solid #22577A !important;
+            border-radius: 1em;
+
+        }
+
+        .btn-primary:hover {
+            background-color: #22577A ;
+            color: #C7F9CC;
+        }
+
+
+
+        .bg-body {
+            background-color: #57CC99 !important;
+            color: #22577A;
+        }
+
+
+        .bi-window {
+            width: 65%;
+        }
+
+        body>section {
+            margin: 5%;
+            padding: 1%;
+        }
+
+        h3 {
+            margin-top: 8%;
+        }
+
+        .row {
+            padding: 8%;
+
+        }
+
+        .footer {
+            position: relative;
+            bottom: 0px;
+        }
+
+        #footer_image {
+
+           height: 100%;
+           width: 10%;
+       }
+
+    </style>
+
 </head>
 
 <body>
-    <nav>
-        <div class="logo">
-            <img class="logo_img" src="img/logo.png" onclick="location.href='index.html'">
-        </div>
-        <div class="logo2">
-            <h2>Recify</h2>
-        </div>
-        <div class="burger">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand"> <img src="img/logo2.png" alt="" width="10%" height="10%" class="d-inline-block align-text-top">
+                Recify</a>
         </div>
     </nav>
-    <div id="main_contents_container">
-        <div id="imgbox">
-            <img src="https://picsum.photos/id/4/370/400">
-            <div id="textOnImageMain" onclick="location.href='search_by_ingredients.html'">Welcome Back, 
-                User !
-            </div>
-        </div>
-        <div class="img_container">
-            <div id="imgbox">
-                <img src="https://picsum.photos/id/232/180/180">
-                <div id="textOnImage" onclick="location.href='random.html'">Get random 10 recipes!</div>
-            </div>
-            <div id="imgbox">
-                <img src="https://picsum.photos/id/6/180/180">
-                <div id="textOnImage" onclick="location.href='trendy.html'">Trendy Foods</div>
+
+    <div class="px-4 py-1 my-5 text-center">
+        <img class="d-block mx-auto mb-4" src="img/main.png" alt="" width="90%">
+        <h1 class="display-5 fw-bold">Welcome to Recify</h1>
+        <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4">DTC-13 is developing a web application project, which is called Recify,
+                that aims to help young adults come up with creative recipes to use for the ingredients
+                that are near the expiration date.</p>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                <a class="btn btn-primary border" href="main.html" role="button">Login or Signup</a>
             </div>
         </div>
     </div>
 
-    <footer>
-
-        
-        <div id="footer_containter">
-            <h5>
-                Copyright © Your Website 2022
-            </h5>
+    <section class="features-icons text-center shadow-lg p-3 mb-5 bg-body rounded border border-4 border-success">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                        <div class="features-icons-icon d-flex">
+                            <img class="bi-window m-auto" src="./img/Screenshot_1.jpg" alt="...">
+                        </div>
+                        <h3>Find Recipes</h3>
+                        <p class="lead mb-0">Search for recipes by specific ingredients.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                        <div class="features-icons-icon d-flex">
+                            <img class="bi-window m-auto" src="./img/Screenshot_2.jpg" alt="...">
+                        </div>
+                        <h3>Random Recipes</h3>
+                        <p class="lead mb-0">Looking for something new? Search through our database for random recipes.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+                        <div class="features-icons-icon d-flex">
+                            <img class="bi-window m-auto" src="./img/Screenshot_3.jpg" alt="...">
+                        </div>
+                        <h3>Popular Recipes</h3>
+                        <p class="lead mb-0">View the most popular recipes on our application.</p>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <form id="footerForm" action="logout" method="POST" class="logoutForm" onsubmit="DoLogoutForm__submit(this); return false;">
-            <input type="submit" class="btn" value="Log Out"/>
-            <button type="button" class="btn" onclick="location.href='/getReviews'">Reviews</button>
-          </form>
-    </footer>
 
-    <script type="module" src="app.js"></script>
+    <div class="container align-content-end footer">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+          <div class="col-md-4 d-flex align-items-center">
+            <a href="/" id="footer_image" class="text-muted text-decoration-none lh-1">
+                <img src="img/logo.png" alt="" width="80%" height="10%" class="d-inline-block align-text-top">
+            </a>
+            <span class="text">© 2022 Company, Inc</span>
+          </div>
+      
+          <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+            <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+            <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+            <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+          </ul>
+        </footer>
+      </div>
+
+
 </body>
 
 </html>
