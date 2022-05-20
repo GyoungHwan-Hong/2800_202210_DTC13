@@ -42,9 +42,27 @@ app.listen(process.env.PORT || 5000, function (err) {
 })
 
 
-app.use(express.static('./public'));
-app.get("/", (req, res) => res.sendFile("index.html"));
 
+app.get('/', function (req, res) {
+    if (req.cookies.x_auth) {
+        res.sendFile(__dirname + '/public/index.html');
+    } else {
+        console.log("Hello, I am stressful.");
+        res.sendFile(__dirname + '/public/login.html');
+    }
+})
+
+
+
+
+// app.use(function(req, res, next) {
+//     if (req.session.user == null){
+// // if user is not logged-in redirect back to login page //
+//         res.redirect('/');
+//     }   else{
+//         next();
+//     }
+// });
 
 const dbAddress = "mongodb+srv://hongkh5218:recify5218@recifycluster.w6cp9.mongodb.net/recify?retryWrites=true&w=majority";
 
@@ -101,17 +119,16 @@ app.post("/doLogin", (req, res) => {
 app.get("/api/user/auth", auth, (req, res) => {
   res.status(200).json({
     _id: req._id,
-    isAdmin: req.user.role === 09 ? false : true,
     isAuth: true,
     email: req.user.email,
     name: req.user.name,
-    lastname: req.user.lastname,
-    role: req.user.role,
-    image: req.user.image,
+    nickname: req.user.nickname,
+    cellphone: req.user.cellphone,
   });
 });
 
-app.post("/api/user/logout", auth, (req, res) => {
+app.post("/logout", auth, (req, res) => {
+
   User.findOneAndUpdate({ _id: req.user._id }, { token: "" }, (err, user) => {
     if (err) return res.json({ success: false, err });
     res.clearCookie("x_auth");
@@ -142,3 +159,5 @@ app.use('/recipe/:id', function (req, res) {
         })
     })
 })
+
+app.use(express.static('./public'));
