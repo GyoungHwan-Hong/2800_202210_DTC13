@@ -37,7 +37,7 @@
 
         #form {
             margin-top: 10%;
-            
+
         }
 
         .footer {
@@ -65,13 +65,25 @@
             color: #C7F9CC;
         }
 
+    #cards{
+
+        width: 70%;
+    }
+
+    .recipes{
+
+        text-align: center;
+        padding: 20px;
+        font-size: 25px;
+    }
+
     </style>
 </head>
 <body>
     <!-- nav -->
     <nav class="navbar navbar-expand-lg navbar-light bg-primary" id="navbar">
         <div class="container-fluid">
-            <a class="navbar-brand"> <img src="img/logo2.png" alt="" width="10%" height="10%"
+            <a class="navbar-brand" href="main.html" > <img src="img/logo2.png" alt="" width="10%" height="10%"
                     class="d-inline-block align-text-top">
                 Recify</a>
 
@@ -81,16 +93,16 @@
 
     <!-- Search form (from w3 school how-to contact form) -->
 
-    <div id="form" class="container">      
+    <div id="form" class="container">
           <label for="firstItem">First Ingredient</label>
           <input type="text" id="firstItem" name="firstItem" placeholder="Enter ingredient">
-      
+
           <label for="secondItem">Second Ingredient</label>
           <input type="text" id="secondItem" name="secondItem" placeholder="Enter ingredient">
 
           <label for="thirdItem">Third Ingredient</label>
           <input type="text" id="thirdItem" name="thirdItem" placeholder="Enter ingredient">
-      
+
           <label for="cuisineStyle">Choose a Cuisine Style</label>
           <select id="cuisineStyle" name="cuisineStyle">
             <option value="Korean">Korean</option>
@@ -99,47 +111,25 @@
             <option value="Indian">Indian</option>
             <option value="French">French</option>
             <option value="Japanese">Japanese</option>
-<!--             <option value="Alien">Alien?!?!</option> -->
           </select>
-           
+
           <button id="submit" class="btn">Search</button>
-      
-      
+
+        </form>
       </div>
 
     <!-- results go here -->
 
     <results>
-        
+
     </results>
 
     <!-- footer -->
-    <div class="container align-content-end footer">
-        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-            <div class="col-md-4 d-flex align-items-center">
-                <a href="/" id="footer_image" class="text-muted text-decoration-none lh-1">
-                    <img src="img/logo.png" alt="" width="80%" height="10%" class="d-inline-block align-text-top">
-                </a>
-                <span class="text">© 2022 Company, Inc</span>
-            </div>
 
-            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-                <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24">
-                            <use xlink:href="#twitter"></use>
-                        </svg></a></li>
-                <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24">
-                            <use xlink:href="#instagram"></use>
-                        </svg></a></li>
-                <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24">
-                            <use xlink:href="#facebook"></use>
-                        </svg></a></li>
-            </ul>
-        </footer>
-    </div>
 
     <!-- js -->
-    <script src="/js/search_by_ingredients.js"></script>
-    
+    <script src="./js/search_by_ingredients.js"></script>
+
 
 </body>
 </html>
