@@ -45,7 +45,7 @@
 
         body {
             background-color: #C7F9CC;
-            color: #FFFAFF;
+            color: black;
         }
 
 
@@ -59,7 +59,7 @@
 
         a {
             text-decoration: none;
-            color: white;
+            color: black;
         }
 
         .btn-lg {
@@ -128,6 +128,18 @@
         h3 {
             margin-top: 8%;
         }
+
+        .footer {
+            position: absolute;
+            bottom: 0px;
+        }
+
+        #footer_image {
+           
+           height: 100%;
+           width: 10%;
+       }
+
     </style>
 
 </head>
@@ -153,7 +165,7 @@
 
     <section class="main-cards">
         <div class="card recify" style="border: none;">
-            <a class="card-body btn" href="search_page.html">
+            <a class="card-body btn" href="search_by_ingredients.html">
                 <h3 class="card-title">Recify</h3>
                 <p class="card-text">Search recipes based on your ingredients.</p>
             </a>
@@ -180,6 +192,25 @@
             </a>
         </div>
     </section>
+
+
+    <div class="container align-content-end footer">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+          <div class="col-md-4 d-flex align-items-center">
+            <a href="/" id="footer_image" class="text-muted text-decoration-none lh-1">
+                <img src="img/logo.png" alt="" width="80%" height="10%" class="d-inline-block align-text-top">
+            </a>
+            <span class="text">© 2022 Company, Inc</span>
+          </div>
+      
+          <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+            <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+            <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+            <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+          </ul>
+        </footer>
+      </div>
+
 
 
 </body>
