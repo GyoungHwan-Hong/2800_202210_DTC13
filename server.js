@@ -9,26 +9,28 @@ const https = require('https');
 const bodyparser = require("body-parser");
 const cookieParser = require("cookie-parser");
 
-
 const { User } = require("./public/models/User");
 const { auth } = require("./public/middleware/auth");
 
 const cors = require("cors");
 
 var ejs = require("ejs");
+var url = require('url');
+const { request } = require('http');
+
+
 app.set("view engine", "ejs");
 app.engine("ejs", ejs.renderFile);
-
 
 app.use(bodyparser.json());
 app.use(cookieParser());
 
 app.use(
     cors({
-      origin: true,
-      credentials: true, 
+        origin: true,
+        credentials: true,
     })
-  );
+);
 
 app.use(bodyparser.urlencoded({
     parameterLimit: 100000,
@@ -41,8 +43,6 @@ app.listen(process.env.PORT || 5000, function (err) {
     if (err) console.log(err);
 })
 
-
-
 app.get('/', function (req, res) {
     if (req.cookies.x_auth) {
         res.sendFile(__dirname + '/public/index.html');
@@ -51,9 +51,6 @@ app.get('/', function (req, res) {
         res.sendFile(__dirname + '/public/login.html');
     }
 })
-
-
-
 
 // app.use(function(req, res, next) {
 //     if (req.session.user == null){
@@ -76,72 +73,98 @@ mongoose
 
 
 app.post("/doJoin", (req, res) => {
-  const user = new User(req.body);
-  user.save((err, userInfo) => {
-    if (err) return res.json({ success: false, err });
-    return res.redirect('/')
-  });
+    const user = new User(req.body);
+    user.save((err, userInfo) => {
+        if (err) return res.sendFile(__dirname + '/public/signup.html');
+        return res.redirect('/')
+    });
 });
 
 app.post("/doLogin", (req, res) => {
-  User.findOne({ ID: req.body.ID }, (err, user) => {
-    if (err || !user) {
-      return res.json({
-        loginSuccess: false,
-        message: "Invaild ID.",
-      });
-    }
-    user
-      .comparePassword(req.body.password)
-      .then((isMatch) => {
-        if (!isMatch) {
-          return res.json({
-            loginSuccess: false,
-            message: "Invalid Password",
-          });
+    User.findOne({ ID: req.body.ID }, (err, user) => {
+        if (err || !user) {
+            alert("Invalid ID!");
+            return res.sendFile(__dirname + '/public/signup.html');
         }
         user
-          .generateToken()
-          .then((user) => {
-            res.sendFile(__dirname + '/public/index.html');
-            // res.cookie("x_auth", user.token).status(200).json({
-            //   loginSuccess: true,
-            //   userId: user._id,
-            // });
-            console.log("Hello")
-          })
-          .catch((err) => {
-            res.status(400).send(err);
-          });
-      })
-      .catch((err) => res.json({ loginSuccess: false, err }));
-  });
+            .comparePassword(req.body.password)
+            .then((isMatch) => {
+                if (!isMatch) {
+                    alert("Invalid Password!");
+                    return res.sendFile(__dirname + '/public/signup.html');
+                }
+                user
+                    .generateToken()
+                    .then((user) => {
+                        res.cookie("x_auth", user.token);
+                        res.sendFile(__dirname + '/public/index.html');
+                    })
+                    .catch((err) => {
+                        res.status(400).send(err);
+                    });
+            })
+            .catch((err) => res.json({ loginSuccess: false, err }));
+    });
 });
 
 app.get("/api/user/auth", auth, (req, res) => {
-  res.status(200).json({
-    _id: req._id,
-    isAuth: true,
-    email: req.user.email,
-    name: req.user.name,
-    nickname: req.user.nickname,
-    cellphone: req.user.cellphone,
-  });
+    res.status(200).json({
+        _id: req._id,
+        isAuth: true,
+        email: req.user.email,
+        name: req.user.name,
+        nickname: req.user.nickname,
+        cellphone: req.user.cellphone,
+    });
 });
 
 app.post("/logout", auth, (req, res) => {
 
-  User.findOneAndUpdate({ _id: req.user._id }, { token: "" }, (err, user) => {
-    if (err) return res.json({ success: false, err });
-    res.clearCookie("x_auth");
-    return res.status(200).send({
-      success: true,
+    User.findOneAndUpdate({ _id: req.user._id }, { token: "" }, (err, user) => {
+        if (err) return res.json({ success: false, err });
+        res.clearCookie("x_auth");
+        return res.sendFile(__dirname + '/public/login.html');
     });
-  });
 });
 
+
+const reviewSchema = new mongoose.Schema({
+    userID: String,
+    recipeID: String,
+    rating: Number,
+    time: String,
+    comment: String
+});
+
+const reviewModel = mongoose.model("reviews", reviewSchema);
+
+app.get('/timeline/getReviews', (req, res)  => {
+    reviewModel.find().then(results => {
+        res.render('timeline.ejs', { result: results })
+    })
+    .catch(err => console.error(error))
+})
+
+app.post("/recipe/writeReview", auth, (req, res) => {
+    let today = new Date();
+    reviewModel.create({
+        userID: req.user.ID,
+        recipeID: req.body.RecipeID,
+        rating: req.body.rating,
+        time: today,
+        comment: req.body.UserComments
+    }, function (err, data) {
+        if (err) {
+          console.log("Error " + err);
+        } else {
+          console.log("Data " + data);
+        }
+        console.log("Insertion is successful");
+      });
+})
+
 app.use('/recipe/:id', function (req, res) {
-    const url = `https://api.spoonacular.com/recipes/${req.params.id}/information?apiKey=44bee3db3d864814b2a115572ee2f5f4&includeNutrition=false`
+    const url = `https://api.spoonacular.com/recipes/${req.params.id}/information?apiKey=598dbdb711b34618b52ffcd93f1e1104&includeNutrition=false`
     data = ""
 
     https.get(url, function (https_res) {
@@ -156,10 +179,13 @@ app.use('/recipe/:id', function (req, res) {
             res.render("recipe.ejs", {
                 "summary": data.summary,
                 "title": data.title,
-                "food_image": data.image
+                "food_image": data.image,
+                "food_ID": data.id
             });
         })
     })
 })
+
+
 
 app.use(express.static('./public'));
