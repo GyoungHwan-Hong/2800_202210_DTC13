@@ -61,8 +61,9 @@
             </h5>
         </div>
 
-        <form action="logout" method="POST" class="logoutForm" onsubmit="DoLogoutForm__submit(this); return false;">
+        <form id="footerForm" action="logout" method="POST" class="logoutForm" onsubmit="DoLogoutForm__submit(this); return false;">
             <input type="submit" class="btn" value="Log Out"/>
+            <button type="button" class="btn" onclick="location.href='/timeline/getReviews'">Reviews</button>
           </form>
     </footer>
 

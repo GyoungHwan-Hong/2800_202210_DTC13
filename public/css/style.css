@@ -142,30 +142,52 @@ input {
 }
 
 
-#myform fieldset{
+#reviewform fieldset{
     display: inline-block; 
     direction: rtl; 
     border: 0; 
 }
-#myform input[type=radio]{
+#reviewform input[type=radio]{
     display: none; 
 }
-#myform label{
+#reviewform label{
     font-size: 1em;
     color: transparent; 
     text-shadow: 0 0 0 #f0f0f0; 
 }
 
-#myform label:hover{
+#reviewform label:hover{
     text-shadow: 0 0 0 #a00; 
 }
-#myform label:hover ~ label{
+#reviewform label:hover ~ label{
     text-shadow: 0 0 0 #a00; 
 }
 
-#myform fieldset legend{
+#reviewform fieldset legend{
     text-align: left;
 }
-#myform input[type=radio]:checked ~ label{
+#reviewform input[type=radio]:checked ~ label{
     text-shadow: 0 0 0 #a00; 
+}
+
+ul {
+    list-style: none;
+    padding-left: 0px;
+}
+
+ul.result {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+#timelineContainer {
+    display: flex;
+    justify-content: center;
+}
+
+
+input .btn {
+    width: 50%;
 }
