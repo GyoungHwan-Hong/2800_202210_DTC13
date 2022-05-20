@@ -23,11 +23,11 @@ async function search_by_ingredients() {
     // console.log(secondItem);
     // console.log(thirdItem);
 
-    if (firstItem = secondItem = thirdItem){
-        alert("Three of a kind! You've found an Easter Egg!");
+    if (firstItem == secondItem && secondItem == thirdItem && firstItem == thirdItem){
+        alert("Three of a kind! I like your hand!");
     }
 
-    if (cuisineItem = "Alien"){
+    if (cuisineItem == "Alien"){
         alert("There's no Alient type cuisine :p");
     }
 
