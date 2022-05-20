@@ -18,21 +18,26 @@ async function search_by_ingredients() {
     thirdItem = $("#thirdItem").val();
     cuisineItem = $("#cuisineStyle option:selected").val();
 
-    // console.log(firstItem);
-    // console.log(secondItem);
-    // console.log(thirdItem);
+    console.log(cuisineItem);
+    console.log(firstItem);
+    console.log(secondItem);
+    console.log(thirdItem);
 
-    await $.ajax({
-        type: "get",
-        url: `https://api.spoonacular.com/recipes/findByIngredients?apiKey=69f6b2d77b0e498f9c58c444875354ab&ingredients=${firstItem},+${secondItem},+${thirdItem}&number=2`,
-        success: async function (data) {
-            console.log("GET request to Spoonacular API made");
-            for (i = 0; i < data.length; i++) {
-                console.log(data[i]["title"]);
-                $("results").append("<div>" + `${data[i]["title"]}` + "</div>");
-            }
-        }
-    })
+    if (firstItem = secondItem = thirdItem){
+        alert("What a troll");
+    }
+
+    // await $.ajax({
+    //     type: "get",
+    //     url: `https://api.spoonacular.com/recipes/findByIngredients?apiKey=69f6b2d77b0e498f9c58c444875354ab&ingredients=${firstItem},+${secondItem},+${thirdItem}&number=2`,
+    //     success: async function (data) {
+    //         console.log("GET request to Spoonacular API made");
+    //         for (i = 0; i < data.length; i++) {
+    //             console.log(data[i]["title"]);
+    //             $("results").append("<div>" + `${data[i]["title"]}` + "</div>");
+    //         }
+    //     }
+    // })
 }
 
 
@@ -41,6 +46,5 @@ function setup() {
         search_by_ingredients();
     })
 }
-
 
 $(document).ready(setup)
