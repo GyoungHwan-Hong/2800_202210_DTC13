@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Recify</title>
+    <link rel="stylesheet" tyep="text/css" href="login.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <form action="doLogin" method="POST" class="loginForm" onsubmit="DoLoginForm__submit(this); return false;">
+        <input type="hidden" name="loginPwReal"/>
+                                                                                                 
+        <h2>Recify</h2>
+        <div class="idForm">
+          <input name="loginId" type="text" class="id" placeholder="ID">
+        </div>
+        <div class="passForm">
+          <input name="loginPw" type="password" class="pw" placeholder="Password">
+        </div>
+        <input type="submit" class="btn" value="Log In"/>
+        <input type="submit" class="btn" value="Sign Up"/>
+    
+      </form>
+
+</body>
+
+</html>

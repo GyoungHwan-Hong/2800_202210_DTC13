@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Recify</title>
+    <link rel="stylesheet" tyep="text/css" href="signup.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <form action="doJoin" method="POST" class="joinForm" onsubmit="DoJoinForm__submit(this); return false;">
+                                                                                               
+        <h2>Sign Up</h2>
+        <div class="textForm">
+          <input name="loginId" type="text" class="id" placeholder="ID">
+          </input>
+        </div>
+        <div class="textForm">
+          <input name="loginPw" type="password" class="pw" placeholder="Password">
+        </div>
+         <div class="textForm">
+          <input name="loginPwConfirm" type="password" class="pw" placeholder="Password Check">
+        </div>
+        <div class="textForm">
+          <input name="name" type="password" class="name" placeholder="Name">
+        </div>
+         <div class="textForm">
+          <input name="email" type="text" class="email" placeholder="Email">
+        </div>
+        <div class="textForm">
+          <input name="nickname" type="text" class="nickname" placeholder="Nickname">
+        </div>
+        <div class="textForm">
+          <input name="cellphoneNo" type="number" class="cellphoneNo" placeholder="Phone Number">
+        </div>
+        <input type="submit" class="btn" value="J O I N"/>
+      </form>
+
+</body>
+
+</html>

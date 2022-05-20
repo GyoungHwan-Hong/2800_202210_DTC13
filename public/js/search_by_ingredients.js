@@ -18,13 +18,22 @@ async function search_by_ingredients() {
     thirdItem = $("#thirdItem").val();
     cuisineItem = $("#cuisineStyle option:selected").val();
 
+    // console.log(cuisineItem);
     // console.log(firstItem);
     // console.log(secondItem);
     // console.log(thirdItem);
 
+    if (firstItem == secondItem && secondItem == thirdItem && firstItem == thirdItem){
+        alert("Three of a kind! I like your hand!");
+    }
+
+    if (cuisineItem == "Alien"){
+        alert("There's no Alient type cuisine :p");
+    }
+
     await $.ajax({
         type: "get",
-        url: `https://api.spoonacular.com/recipes/findByIngredients?apiKey=69f6b2d77b0e498f9c58c444875354ab&ingredients=${firstItem},+${secondItem},+${thirdItem}&number=2`,
+        url: `https://api.spoonacular.com/recipes/findByIngredients?apiKey=69f6b2d77b0e498f9c58c444875354ab&ingredients=${firstItem},+${secondItem},+${thirdItem}&number=10`,
         success: async function (data) {
             console.log("GET request to Spoonacular API made");
             for (i = 0; i < data.length; i++) {
@@ -41,6 +50,5 @@ function setup() {
         search_by_ingredients();
     })
 }
-
 
 $(document).ready(setup)
