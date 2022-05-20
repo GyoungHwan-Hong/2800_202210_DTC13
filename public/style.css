@@ -169,3 +169,25 @@ input {
 #myform input[type=radio]:checked ~ label{
     text-shadow: 0 0 0 #a00; 
 }
+
+ul {
+    list-style: none;
+    padding-left: 0px;
+}
+
+ul.result {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+#timelineContainer {
+    display: flex;
+    justify-content: center;
+}
+
+
+input .btn {
+    width: 50%;
+}
