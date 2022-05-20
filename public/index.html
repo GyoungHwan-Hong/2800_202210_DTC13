@@ -7,6 +7,7 @@
 
     <title>Recify</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <body>
@@ -26,7 +27,7 @@
     <div id="main_contents_container">
         <div id="imgbox">
             <img src="https://picsum.photos/id/4/370/400">
-            <div id="textOnImage" onclick="location.href='search_page.html'">Welcome Back, 
+            <div id="textOnImageMain" onclick="location.href='search_by_ingredients.html'">Welcome Back, 
                 User !
             </div>
         </div>
@@ -38,16 +39,6 @@
             <div id="imgbox">
                 <img src="https://picsum.photos/id/6/180/180">
                 <div id="textOnImage" onclick="location.href='trendy.html'">Trendy Foods</div>
-            </div>
-        </div>
-        <div class="img_container">
-            <div id="imgbox">
-                <img src="https://picsum.photos/id/423/180/180">
-                <div id="textOnImage" onclick="location.href='search_by_ingredients.html'">Search Recipes with Ingredients</div>
-            </div>
-            <div id="imgbox">
-                <img src="https://picsum.photos/id/343/180/180">
-                <div id="textOnImage">Menu D</div>
             </div>
         </div>
     </div>
@@ -63,11 +54,11 @@
 
         <form id="footerForm" action="logout" method="POST" class="logoutForm" onsubmit="DoLogoutForm__submit(this); return false;">
             <input type="submit" class="btn" value="Log Out"/>
-            <button type="button" class="btn" onclick="location.href='/timeline/getReviews'">Reviews</button>
+            <button type="button" class="btn" onclick="location.href='/getReviews'">Reviews</button>
           </form>
     </footer>
 
-    <script src="app.js"></script>
+    <script type="module" src="app.js"></script>
 </body>
 
 </html>

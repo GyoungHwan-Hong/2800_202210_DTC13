@@ -96,6 +96,7 @@ app.post("/doLogin", (req, res) => {
                 user
                     .generateToken()
                     .then((user) => {
+                        res.cookie("userNickName", user.nickname);
                         res.cookie("x_auth", user.token);
                         res.sendFile(__dirname + '/public/index.html');
                     })
@@ -138,7 +139,7 @@ const reviewSchema = new mongoose.Schema({
 
 const reviewModel = mongoose.model("reviews", reviewSchema);
 
-app.get('/timeline/getReviews', (req, res)  => {
+app.get('/getReviews', (req, res)  => {
     reviewModel.find().then(results => {
         res.render('timeline.ejs', { result: results })
     })

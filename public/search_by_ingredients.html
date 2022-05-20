@@ -61,12 +61,18 @@
 
     <!-- footer -->
     <footer>
+
+        
         <div id="footer_containter">
             <h5>
                 Copyright © Your Website 2022
             </h5>
         </div>
-    </footer>
+
+        <form id="footerForm" action="logout" method="POST" class="logoutForm" onsubmit="DoLogoutForm__submit(this); return false;">
+            <input type="submit" class="btn" value="Log Out"/>
+            <button type="button" class="btn" onclick="location.href='/getReviews'">Reviews</button>
+          </form>
 
     <!-- js -->
     <script src="/js/search_by_ingredients.js"></script>
