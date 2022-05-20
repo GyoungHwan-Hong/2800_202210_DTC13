@@ -7,15 +7,28 @@ const app = express();
 
 const https = require('https');
 const bodyparser = require("body-parser");
+const cookieParser = require("cookie-parser");
 
 
 const { User } = require("./public/models/User");
 const { auth } = require("./public/middleware/auth");
 
+const cors = require("cors");
+
 var ejs = require("ejs");
 app.set("view engine", "ejs");
 app.engine("ejs", ejs.renderFile);
 
+
+app.use(bodyparser.json());
+app.use(cookieParser());
+
+app.use(
+    cors({
+      origin: true,
+      credentials: true, 
+    })
+  );
 
 app.use(bodyparser.urlencoded({
     parameterLimit: 100000,
@@ -24,7 +37,7 @@ app.use(bodyparser.urlencoded({
 }))
 
 
-app.listen(process.env.PORT || 3000, function (err) {
+app.listen(process.env.PORT || 5000, function (err) {
     if (err) console.log(err);
 })
 
@@ -33,7 +46,7 @@ app.use(express.static('./public'));
 app.get("/", (req, res) => res.sendFile("index.html"));
 
 
-const dbAddress = "mongodb+srv://hongkh5218:recify5218@recifycluster.w6cp9.mongodb.net/?retryWrites=true&w=majority";
+const dbAddress = "mongodb+srv://hongkh5218:recify5218@recifycluster.w6cp9.mongodb.net/recify?retryWrites=true&w=majority";
 
 mongoose
     .connect(dbAddress, {
@@ -43,31 +56,70 @@ mongoose
     .then(() => console.log("MongoDB Connected"))
     .catch((err) => console.log(err));
 
-const UserSchema = new mongoose.Schema ({
-    Name: String,
-    ID: String,
-    Password: String
-})
 
-const UserModel = mongoose.model("UserInfo", UserSchema);
-
-
-app.post("/register", (req, res) => {
-    console.log(req.body);
-    UserModel.create({
-      Name: req.body.Name,
-      ID: req.body.ID,
-      Password: req.body.Password
-    }, function (err, data) {
-      if (err) {
-        console.log("Error " + err);
-      } else {
-        console.log("Data " + data);
-      }
-      res.send("Insertion is successful");
-    });
+app.post("/doJoin", (req, res) => {
+  const user = new User(req.body);
+  user.save((err, userInfo) => {
+    if (err) return res.json({ success: false, err });
+    return res.status(200).json({ success: true });
+  });
 });
 
+app.post("/doLogin", (req, res) => {
+  User.findOne({ ID: req.body.ID }, (err, user) => {
+    if (err || !user) {
+      return res.json({
+        loginSuccess: false,
+        message: "Invaild ID.",
+      });
+    }
+    user
+      .comparePassword(req.body.password)
+      .then((isMatch) => {
+        if (!isMatch) {
+          return res.json({
+            loginSuccess: false,
+            message: "Invalid Password",
+          });
+        }
+        user
+          .generateToken()
+          .then((user) => {
+            res.cookie("x_auth", user.token).status(200).json({
+              loginSuccess: true,
+              userId: user._id,
+            });
+          })
+          .catch((err) => {
+            res.status(400).send(err);
+          });
+      })
+      .catch((err) => res.json({ loginSuccess: false, err }));
+  });
+});
+
+app.get("/api/user/auth", auth, (req, res) => {
+  res.status(200).json({
+    _id: req._id,
+    isAdmin: req.user.role === 09 ? false : true,
+    isAuth: true,
+    email: req.user.email,
+    name: req.user.name,
+    lastname: req.user.lastname,
+    role: req.user.role,
+    image: req.user.image,
+  });
+});
+
+app.post("/api/user/logout", auth, (req, res) => {
+  User.findOneAndUpdate({ _id: req.user._id }, { token: "" }, (err, user) => {
+    if (err) return res.json({ success: false, err });
+    res.clearCookie("x_auth");
+    return res.status(200).send({
+      success: true,
+    });
+  });
+});
 
 app.use('/recipe/:id', function (req, res) {
     const url = `https://api.spoonacular.com/recipes/${req.params.id}/information?apiKey=44bee3db3d864814b2a115572ee2f5f4&includeNutrition=false`
