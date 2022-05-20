@@ -1,7 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="618033b9-8868-4aef-9d4c-3a6608a5c635" name="Changes" comment="" />
+    <list default="true" id="e4717ad6-62e0-4600-b771-4d376ff61d84" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/public/img/logo2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/logo3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Screenshot_1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/Screenshot_1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Screenshot_2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/Screenshot_2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Screenshot_3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/Screenshot_3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/landing.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/random.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/random.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/random.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/random.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/random_recipe.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/random_recipe.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/recipe.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/recipe.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/search_by_ingredients.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/search_by_ingredients.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/trendy.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/trendy.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/recipe.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/recipe.ejs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

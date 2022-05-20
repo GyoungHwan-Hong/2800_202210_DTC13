@@ -18,7 +18,7 @@ function processDisplay(data) {
             `
                 <div class="recipe_img_box">
                 <img src="${data.recipes[i].image}" style="max-width: 100%; height: auto;">
-                <a href="/recipe/${data.recipes[i].id}">${data.recipes[i].title}</a>
+                <a class="recipe_name" href="/recipe/${data.recipes[i].id}">${data.recipes[i].title}</a>
                 </div>
                 `
 
@@ -34,7 +34,7 @@ function processDisplay(data) {
 async function getRandomRecipe() {
     await $.ajax({
         type: "GET",
-        url: `https://api.spoonacular.com/recipes/random?apiKey=598dbdb711b34618b52ffcd93f1e1104&number=10`,
+        url: `https://api.spoonacular.com/recipes/random?apiKey=904ba18229eb40dba7b8e694b40926ae&number=10`,
         success: processDisplay
     })
 }
