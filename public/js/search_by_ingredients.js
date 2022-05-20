@@ -18,10 +18,10 @@ async function search_by_ingredients() {
     thirdItem = $("#thirdItem").val();
     cuisineItem = $("#cuisineStyle option:selected").val();
 
-    console.log(cuisineItem);
-    console.log(firstItem);
-    console.log(secondItem);
-    console.log(thirdItem);
+    // console.log(cuisineItem);
+    // console.log(firstItem);
+    // console.log(secondItem);
+    // console.log(thirdItem);
 
     if (firstItem = secondItem = thirdItem){
         alert("What a troll");
