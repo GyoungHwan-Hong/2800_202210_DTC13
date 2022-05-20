@@ -27,6 +27,10 @@ async function search_by_ingredients() {
         alert("What a troll");
     }
 
+    if (cuisineItem = "Alien"){
+        alert("There's no Alient type cuisine :p");
+    }
+
     // await $.ajax({
     //     type: "get",
     //     url: `https://api.spoonacular.com/recipes/findByIngredients?apiKey=69f6b2d77b0e498f9c58c444875354ab&ingredients=${firstItem},+${secondItem},+${thirdItem}&number=2`,
