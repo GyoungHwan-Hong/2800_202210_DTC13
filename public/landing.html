@@ -13,32 +13,12 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
 
-    <style>
-        .nav-pills .nav-link.active,
-        .nav-pills .show>.nav-link {
-            /* font colour and background colour of the selected tab */
-            color: white;
-            background-color: wheat;
-            border-radius: 1em;
-            margin-top: 3%;
-            margin-bottom: 3%;
-        }
-
-        .nav-link {
-            /* font colour of the rest of the unselected tab */
-            color: rgb(136, 220, 241);
-        }
-
-        .text-primary {
-            /* font colour of the My todo list */
-            color: #a5b6a5 !important;
-        }
-
+    <style>      
 
         .bg-primary {
             /*Navbar*/
-            background-color: #FFA45B !important;
-            border-bottom: 2px solid rgb(136, 220, 241) !important;
+            background-color: #22577A !important;
+            border-bottom: 5px solid #38A3A5 !important;
         }
 
         .navbar-brand {
@@ -48,33 +28,34 @@
             font-size: 1.25rem;
             text-decoration: none;
             white-space: nowrap;
-            color: black !important;
+            color: #C7F9CC !important;
         }
 
         body {
-            background-color: #AEE6E6;
+            background-color: #C7F9CC;
             color: black;
         }
 
         
         .btn-primary {
-            background-color: #FFDA77;
+            background-color: #80ED99;
             color: black;
             border: 0px;
             border-radius: 1em;
         }
 
+        .btn-primary:hover {
+            background-color: #22577A ;
+            color: #C7F9CC;
+        }
+
         
 
         .bg-body {
-            background-color: #FFDA77 !important;
-            color: #1D3461;
+            background-color: #57CC99 !important;
+            color: #22577A;
         }
 
-        a {
-            text-decoration: none;
-            color: white;
-        }
 
         .bi-window {
             width: 65%;
@@ -82,10 +63,16 @@
 
         body>section {
             margin: 5%;
+            padding: 1%;
         }
 
         h3 {
             margin-top: 8%;
+        }
+
+        .row {
+            padding: 8%;
+
         }
 
     </style>
@@ -95,30 +82,31 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-primary">
         <div class="container-fluid">
-            <a class="navbar-brand">Recify</a>
+            <a class="navbar-brand"> <img src="img/logo2.png" alt="" width="10%" height="10%" class="d-inline-block align-text-top">
+                Recify</a>
         </div>
     </nav>
 
-    <div class="px-4 py-5 my-5 text-center">
-        <img class="d-block mx-auto mb-4" src="#" alt="" width="72">
+    <div class="px-4 py-1 my-5 text-center">
+        <img class="d-block mx-auto mb-4" src="img/main.png" alt="" width="90%">
         <h1 class="display-5 fw-bold">Welcome to Recify</h1>
         <div class="col-lg-6 mx-auto">
             <p class="lead mb-4">DTC-13 is developing a web application project, which is called Recify,
                 that aims to help young adults come up with creative recipes to use for the ingredients
                 that are near the expiration date.</p>
             <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                <a class="btn btn-primary" href="#" role="button">Login or Signup</a>
+                <a class="btn btn-primary border border-2 border-success" href="#" role="button">Login or Signup</a>
             </div>
         </div>
     </div>
 
-    <section class="features-icons text-center shadow-lg p-3 mb-5 bg-body rounded">
+    <section class="features-icons text-center shadow-lg p-3 mb-5 bg-body rounded border border-4 border-success">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4">
                     <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
                         <div class="features-icons-icon d-flex">
-                            <img class="bi-window m-auto text-primary" src="./images/Screenshot_1.jpg" alt="...">
+                            <img class="bi-window m-auto" src="./img/Screenshot_1.jpg" alt="...">
                         </div>
                         <h3>Find Recipes</h3>
                         <p class="lead mb-0">Search for recipes by specific ingredients.</p>
@@ -127,7 +115,7 @@
                 <div class="col-lg-4">
                     <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
                         <div class="features-icons-icon d-flex">
-                            <img class="bi-window m-auto text-primary" src="./images/Screenshot_2.jpg" alt="...">
+                            <img class="bi-window m-auto" src="./img/Screenshot_2.jpg" alt="...">
                         </div>
                         <h3>Random Recipes</h3>
                         <p class="lead mb-0">Looking for something new? Search through our database for random recipes.
@@ -137,7 +125,7 @@
                 <div class="col-lg-4">
                     <div class="features-icons-item mx-auto mb-0 mb-lg-3">
                         <div class="features-icons-icon d-flex">
-                            <img class="bi-window m-auto text-primary" src="./images/Screenshot_3.jpg" alt="...">
+                            <img class="bi-window m-auto" src="./img/Screenshot_3.jpg" alt="...">
                         </div>
                         <h3>Popular Recipes</h3>
                         <p class="lead mb-0">View the most popular recipes on our application.</p>
