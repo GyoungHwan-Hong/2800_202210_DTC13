@@ -79,7 +79,7 @@ app.post("/doJoin", (req, res) => {
   const user = new User(req.body);
   user.save((err, userInfo) => {
     if (err) return res.json({ success: false, err });
-    return res.status(200).json({ success: true });
+    return res.redirect('/')
   });
 });
 
@@ -103,10 +103,12 @@ app.post("/doLogin", (req, res) => {
         user
           .generateToken()
           .then((user) => {
-            res.cookie("x_auth", user.token).status(200).json({
-              loginSuccess: true,
-              userId: user._id,
-            });
+            res.sendFile(__dirname + '/public/index.html');
+            // res.cookie("x_auth", user.token).status(200).json({
+            //   loginSuccess: true,
+            //   userId: user._id,
+            // });
+            console.log("Hello")
           })
           .catch((err) => {
             res.status(400).send(err);
