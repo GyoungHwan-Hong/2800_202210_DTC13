@@ -25,11 +25,18 @@ async function search_by_ingredients() {
 
     if (firstItem == secondItem && secondItem == thirdItem && firstItem == thirdItem){
         alert("Three of a kind! I like your hand!");
+        $("results").append("<div> <img src='/img/easteregg2.jpg'> </div>");
+    }
+    
+    if (firstItem == "Athos" && secondItem == "Aramis" && thirdItem == "Porthos"){
+        alert("All for one and one for all, united we stand divided we fall!");
+        $("results").append("<div> <img src='/img/easteregg1.jpg'> </div>")
     }
 
-    if (cuisineItem == "Alien"){
-        alert("There's no Alient type cuisine :p");
-    }
+    // if (cuisineItem == "Alien"){
+    //     alert("uhmmm - Space food!");
+    //     $("results").append("<div> <img src='/img/easteregg3.jpg'> </div>")
+    // }
 
     await $.ajax({
         type: "get",
