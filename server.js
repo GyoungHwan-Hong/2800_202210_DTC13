@@ -162,6 +162,7 @@ app.post("/recipe/writeReview", auth, (req, res) => {
           console.log("Data " + data);
         }
         console.log("Insertion is successful");
+        alert("Successfully, write review.");
       });
 })
 
