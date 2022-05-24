@@ -38,8 +38,10 @@ async function search_by_ingredients() {
             console.log("GET request to Spoonacular API made");
             for (i = 0; i < data.length; i++) {
                 console.log(data[i]["title"]);
-                $("results").append("<div class='recipes'>" + `${data[i]["title"]}` + "</div>");
-
+                $("results").append(`<div class='recipes'> 
+                <img src="${data[i].image}">
+                <a href="/recipe/${data[i].id}">${data[i].title}</a>
+                </div>`);
             }
         }
     })
