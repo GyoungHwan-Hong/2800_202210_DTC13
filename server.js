@@ -45,11 +45,9 @@ app.listen(process.env.PORT || 5000, function (err) {
 
 app.get('/', function (req, res) {
     if (req.cookies.x_auth) {
-        console.log("Test");
-        res.sendFile(__dirname + '/public/login.html');
+        res.sendFile(__dirname + '/public/main.html');
     } else {
-        console.log("Hello, I am stressful.");
-        res.sendFile(__dirname + '/public/index.html');
+        res.sendFile(__dirname + '/public/login.html');
     }
 })
 
@@ -125,6 +123,7 @@ app.post("/logout", auth, (req, res) => {
     User.findOneAndUpdate({ _id: req.user._id }, { token: "" }, (err, user) => {
         if (err) return res.json({ success: false, err });
         res.clearCookie("x_auth");
+        res.clearCookie("userNickName");
         return res.sendFile(__dirname + '/public/login.html');
     });
 });
@@ -162,12 +161,11 @@ app.post("/recipe/writeReview", auth, (req, res) => {
           console.log("Data " + data);
         }
         console.log("Insertion is successful");
-        alert("Successfully, write review.");
       });
 })
 
 app.use('/recipe/:id', function (req, res) {
-    const url = `https://api.spoonacular.com/recipes/${req.params.id}/information?apiKey=45bfd0648ab74f6c8cccb1aae6399519&includeNutrition=false`
+    const url = `https://api.spoonacular.com/recipes/${req.params.id}/information?apiKey=598dbdb711b34618b52ffcd93f1e1104&includeNutrition=false`
     data = ""
 
     https.get(url, function (https_res) {
