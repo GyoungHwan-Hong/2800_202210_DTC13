@@ -45,7 +45,6 @@
             
         }
 
-       
 
         .header {
             border-radius: 8%;
@@ -83,6 +82,8 @@
        }
 
     </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
 
 </head>
 
@@ -101,25 +102,20 @@
 
         <ul class="nav nav-pills justify-content-between">
             <li class="nav-item">
-                <button type="button" class="btn" onclick="Trendy_contents_change_Today()">Today</button>
+                <button type="button" class="btn" onclick="Trendy_contents_change_Main()">Main course</button>
             </li>
             <li class="nav-item">
-                <button type="button" class="btn" onclick="Trendy_contents_change_Weekly()">Weekly</button>
+                <button type="button" class="btn" onclick="Trendy_contents_change_Appetizer()">Appetizer</button>
             </li>
             <li class="nav-item">
-                <button type="button" class="btn" onclick="Trendy_contents_change_Monthly()">Monthly</button>
+                <button type="button" class="btn" onclick="Trendy_contents_change_Dessert()">Dessert</button>
             </li>
           </ul>
     </div>
 
 
 
-    <ol class="list-group list-group-numbered" id="Trendy_Food_List" onclick="location.href='recipe.html'">
-        <li class="list-group-item">Kimchi Fried Rice</li>
-        <li class="list-group-item">Curry rice</li>
-        <li class="list-group-item">Pasta</li>
-        <li class="list-group-item">Pizza</li>
-        <li class="list-group-item">Coffee with Donut</li>
+    <ol class="list-group list-group-numbered" id="Trendy_Food_List">
     </ol>
 
 
