@@ -45,11 +45,9 @@ app.listen(process.env.PORT || 5000, function (err) {
 
 app.get('/', function (req, res) {
     if (req.cookies.x_auth) {
-        console.log("Test");
-        res.sendFile(__dirname + '/public/login.html');
-    } else {
-        console.log("Hello, I am stressful.");
         res.sendFile(__dirname + '/public/index.html');
+    } else {
+        res.sendFile(__dirname + '/public/login.html');
     }
 })
 
@@ -125,6 +123,7 @@ app.post("/logout", auth, (req, res) => {
     User.findOneAndUpdate({ _id: req.user._id }, { token: "" }, (err, user) => {
         if (err) return res.json({ success: false, err });
         res.clearCookie("x_auth");
+        res.clearCookie("userNickName");
         return res.sendFile(__dirname + '/public/login.html');
     });
 });
@@ -162,7 +161,6 @@ app.post("/recipe/writeReview", auth, (req, res) => {
           console.log("Data " + data);
         }
         console.log("Insertion is successful");
-        alert("Successfully, write review.");
       });
 })
 
