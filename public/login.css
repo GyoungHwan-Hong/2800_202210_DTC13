@@ -11,18 +11,18 @@
     border-radius: 15px;
   }
   
-  .loginForm h2{
+  .loginForm h2 {
     text-align: center;
     margin: 30px;
   }
   
-  .idForm{
+  .idForm {
     border-bottom: 2px solid #adadad;
     margin: 30px;
     padding: 10px 10px;
   }
   
-  .passForm{
+  .passForm {
     border-bottom: 2px solid #adadad;
     margin: 30px;
     padding: 10px 10px;
