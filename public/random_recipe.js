@@ -34,11 +34,7 @@ function processDisplay(data) {
 async function getRandomRecipe() {
     await $.ajax({
         type: "GET",
-<<<<<<< HEAD
-        url: `https://api.spoonacular.com/recipes/random?apiKey=d5e421f2028642f7b61972e936d305e1&number=10`,
-=======
         url: `https://api.spoonacular.com/recipes/random?apiKey=91c165549f554a20bf3f4a83ac0e2bf1&number=10`,
->>>>>>> 94b62c9d7ecfac75944a73d265563884628bd906
         success: processDisplay
     })
 }
