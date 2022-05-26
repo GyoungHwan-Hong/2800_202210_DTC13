@@ -118,7 +118,7 @@ app.get("/api/user/auth", auth, (req, res) => {
     });
 });
 
-app.post('/logout', auth, (req, res) => {
+app.get("/logout", auth, (req, res) => {
 
     User.findOneAndUpdate({ _id: req.user._id }, { token: "" }, (err, user) => {
         if (err) return res.json({ success: false, err });
@@ -139,7 +139,7 @@ const reviewSchema = new mongoose.Schema({
 
 const reviewModel = mongoose.model("reviews", reviewSchema);
 
-app.get('/getReviews', (req, res)  => {
+app.get("/getReviews", (req, res)  => {
     reviewModel.find().then(results => {
         res.render('timeline.ejs', { result: results })
     })
@@ -161,6 +161,7 @@ app.post("/recipe/writeReview", auth, (req, res) => {
           console.log("Data " + data);
         }
         console.log("Insertion is successful");
+        res.send("<script>alert('Success!!');location.href='/recipe/"+req.body.RecipeID+"';</script>");
       });
 })
 

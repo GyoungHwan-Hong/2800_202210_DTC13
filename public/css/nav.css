@@ -51,7 +51,6 @@
     width: 60px;
     height: 30px;
     cursor: pointer;
-    /* z-index 추가 */
     z-index: 2;
   }
   
