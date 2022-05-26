@@ -125,26 +125,25 @@
             </div>
         </div>
     </nav>
-    <div id="timelineContainer">
-        <ul class="result">
-            <!-- Loop through quotes -->
-            <% for(var i = 0; i < result.length; i++) {%>
-              <li class="result">
-                <div class="card" style="width: 18rem;">
-                    <div class="card-body">
-                      <h5 class="card-title">Recipe ID: <%= result[i].recipeID %></h5>
-                      <h6 class="card-subtitle mb-2 text-muted">User ID: <%= result[i].userID %></h6>
-                      <h7 class="card-link">Rating: <%= result[i].rating %></p>
-                      <p class="card-text">Comment: <%= result[i].comment %></p>
-                      <p class="card-link">Time: <%= result[i].time %></p>
-                    </div>
-                  </div>
 
-              </li>
-            <% } %>
-          </ul>
+    <main>
 
-    </div>
+        <p id="UserID">User ID: <%= id %>
+        </p>
+        <p id="Password">Password: <%= email %>
+        </p>
+        <p id="NickName">Nick Name: <%= nickname %>
+        </p>
+        <p id="Phon Number">Phone Number: <%= phone %>
+        </p>
+        <!-- <p id="email">Email: </p>
+        <p id="phone">Phone: </p> -->
+        <p></p>
+
+    </main>
+
+
+
     <div class="container align-content-end footer">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
             <div class="col-md-4 d-flex align-items-center">
