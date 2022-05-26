@@ -28,7 +28,7 @@ async function search_by_ingredients() {
 
     await $.ajax({
         type: "get",
-        url: `https://api.spoonacular.com/recipes/findByIngredients?apiKey=81b70d1ee3be478cb65dc0b78bb19e6e&ingredients=${firstItem},+${secondItem},+${thirdItem}&number=10`,
+        url: `https://api.spoonacular.com/recipes/findByIngredients?apiKey=d5e421f2028642f7b61972e936d305e1&ingredients=${firstItem},+${secondItem},+${thirdItem}&number=10`,
         success: async function (data) {
             console.log("GET request to Spoonacular API made");
             for (i = 0; i < data.length; i++) {

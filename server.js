@@ -190,7 +190,7 @@ app.get("/getReviews", (req, res)  => {
     }
 })
 
-app.post("/recipe/writeReview", auth, (req, res) => {
+app.post("/writeReview", auth, (req, res) => {
     let today = new Date();
     reviewModel.create({
         userID: req.user.ID,
@@ -204,13 +204,12 @@ app.post("/recipe/writeReview", auth, (req, res) => {
         } else {
           console.log("Data " + data);
         }
-        console.log("Insertion is successful");
         res.send("<script>alert('Success!!');location.href='/recipe/"+req.body.RecipeID+"';</script>");
       });
 })
 
 app.use('/recipe/:id', function (req, res) {
-    const url = `https://api.spoonacular.com/recipes/${req.params.id}/information?apiKey=81b70d1ee3be478cb65dc0b78bb19e6e&includeNutrition=false`
+    const url = `https://api.spoonacular.com/recipes/${req.params.id}/information?apiKey=d5e421f2028642f7b61972e936d305e1&includeNutrition=false`
     data = ""
 
     https.get(url, function (https_res) {

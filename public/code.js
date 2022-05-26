@@ -19,7 +19,7 @@ function processDisplay(data) {
 function getRecipe(data) {
     await $.ajax({
         type: "GET",
-        url: `https://api.spoonacular.com/recipes/716429/information?apiKey=81b70d1ee3be478cb65dc0b78bb19e6e&includeNutrition=false`,
+        url: `https://api.spoonacular.com/recipes/716429/information?apiKey=d5e421f2028642f7b61972e936d305e1&includeNutrition=false`,
         success: processPokeResp
     })
 }
@@ -27,7 +27,7 @@ function getRecipe(data) {
 function getRandomRecipe() {
     await $.ajax({
         type: "GET",
-        url: `https://api.spoonacular.com/recipes/716429/information?apiKey=81b70d1ee3be478cb65dc0b78bb19e6e&includeNutrition=false`,
+        url: `https://api.spoonacular.com/recipes/716429/information?apiKey=d5e421f2028642f7b61972e936d305e1&includeNutrition=false`,
         success: processDisplay
     })
 }
