@@ -39,7 +39,7 @@
             text-align: center;
             align-items: center;
             color: #22577A;
-            
+
         }
 
         #food_image {
@@ -102,21 +102,34 @@
         }
     </style>
 
+    <link rel="stylesheet" type="text/css" href="/css/nav.css">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-primary" id="navbar">
-        <div class="container-fluid">
-            <a class="navbar-brand"> Recify</a>
-
-
+    <nav>
+        <div class="navbar">
+            <img src="/img/logo2.png" onclick="location.href='/'" height="10%" width="10%">
+            <a>Recify</a>
+            <input type="checkbox" id="check_box" />
+            <label for="check_box">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <div id="side_menu">
+                <ul>
+                    <li><a href="/profile">Profile</a></li>
+                    <li><a href="/getReviews">Recent Reviews</a></li>
+                    <li><a href="/logout">Logout</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 
     <main>
 
 
-            <img id="food_pic" src=<%= food_image %>>
+        <img id="food_pic" src=<%=food_image %>>
 
         <div id="title">
             <%= title %>
@@ -136,18 +149,24 @@
 
     <div class="container align-content-end footer">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-          <div class="col-md-4 d-flex align-items-center">
+            <div class="col-md-4 d-flex align-items-center">
 
-            <span class="text">© 2022 Company, Inc</span>
-          </div>
+                <span class="text">© 2022 Company, Inc</span>
+            </div>
 
-          <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-            <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
-            <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
-            <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
-          </ul>
+            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24">
+                            <use xlink:href="#twitter"></use>
+                        </svg></a></li>
+                <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24">
+                            <use xlink:href="#instagram"></use>
+                        </svg></a></li>
+                <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24">
+                            <use xlink:href="#facebook"></use>
+                        </svg></a></li>
+            </ul>
         </footer>
-      </div>
+    </div>
 
 
     <!-- Modal -->
@@ -169,24 +188,26 @@
                             <input type="radio" name="rating" value="2" id="rate4"><label for="rate4">⭐</label>
                             <input type="radio" name="rating" value="1" id="rate5"><label for="rate5">⭐</label>
                         </fieldset>
-                        <input type="text" name="UserComments" class="UserComments"/>
-                        <input type="text" name="RecipeID" class="RecipeID" value="<%= food_ID %>" hidden="true"/>
+                        <input type="text" name="UserComments" class="UserComments" />
+                        <input type="text" name="RecipeID" class="RecipeID" value="<%= food_ID %>" hidden="true" />
 
-                
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <input type="submit" class="btn btn-primary" value="Submit"/>
-                    <!-- <Button type="submit" class="btn btn-primary">Submit</button> -->
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <input type="submit" class="btn btn-primary" value="Submit" />
+                            <!-- <Button type="submit" class="btn btn-primary">Submit</button> -->
+                        </div>
+                    </form>
+
                 </div>
-                </form>
-
-            </div>
             </div>
         </div>
     </div>
 
     <!-- <script src="app.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
 
 </body>
 

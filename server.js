@@ -118,7 +118,7 @@ app.get("/api/user/auth", auth, (req, res) => {
     });
 });
 
-app.post("/logout", auth, (req, res) => {
+app.post('/logout', auth, (req, res) => {
 
     User.findOneAndUpdate({ _id: req.user._id }, { token: "" }, (err, user) => {
         if (err) return res.json({ success: false, err });
@@ -165,7 +165,7 @@ app.post("/recipe/writeReview", auth, (req, res) => {
 })
 
 app.use('/recipe/:id', function (req, res) {
-    const url = `https://api.spoonacular.com/recipes/${req.params.id}/information?apiKey=598dbdb711b34618b52ffcd93f1e1104&includeNutrition=false`
+    const url = `https://api.spoonacular.com/recipes/${req.params.id}/information?apiKey=45bfd0648ab74f6c8cccb1aae6399519&includeNutrition=false`
     data = ""
 
     https.get(url, function (https_res) {

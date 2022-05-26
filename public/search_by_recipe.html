@@ -132,18 +132,27 @@
 
 
     </style>
+<link rel="stylesheet" href="css/nav.css">
 </head>
 
 <body>
-
-    <!-- nav -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-primary" id="navbar">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/"> <img src="img/logo2.png" alt="" width="10%" height="10%"
-                    class="d-inline-block align-text-top">
-                Recify</a>
-
-
+    <nav>
+        <div class="navbar">
+            <img src="img/logo2.png" onclick="location.href='/'" height="10%" width="10%">
+            <a>Recify</a>
+            <input type="checkbox" id="check_box" />
+            <label for="check_box">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <div id="side_menu">
+                <ul>
+                    <li><a href="/profile">Profile</a></li>
+                    <li><a href="/getReviews">Recent Reviews</a></li>
+                    <li><a href="/logout">Logout</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 

@@ -7,20 +7,27 @@
 
     <title>Recify</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="css/nav.css">
 </head>
 
 <body>
     <nav>
-        <div class="logo">
-            <img class="logo_img" src="img/logo.png" onclick="location.href='index.html'">
-        </div>
-        <div class="logo2">
-            <h2>Recify</h2>
-        </div>
-        <div class="burger">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
+        <div class="navbar">
+            <img src="img/logo2.png" onclick="location.href='/'" height="10%" width="10%">
+            <a>Recify</a>
+            <input type="checkbox" id="check_box" />
+            <label for="check_box">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <div id="side_menu">
+                <ul>
+                    <li><a href="/profile">Profile</a></li>
+                    <li><a href="/getReviews">Recent Reviews</a></li>
+                    <li><a href="/logout">Logout</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
     <div id="main_contents_container">
