@@ -82,14 +82,14 @@ app.post("/doJoin", (req, res) => {
 app.post("/doLogin", (req, res) => {
     User.findOne({ ID: req.body.ID }, (err, user) => {
         if (err || !user) {
-            alert("Invalid ID!");
+            res.send("<script>alert('Invalid ID/Password.');location.href='/signup.html';</script>");
             return res.sendFile(__dirname + '/public/signup.html');
         }
         user
             .comparePassword(req.body.password)
             .then((isMatch) => {
                 if (!isMatch) {
-                    alert("Invalid Password!");
+                    res.send("<script>alert('Invalid ID/Password.');location.href='/signup.html';</script>");
                     return res.sendFile(__dirname + '/public/signup.html');
                 }
                 user
@@ -210,7 +210,7 @@ app.post("/recipe/writeReview", auth, (req, res) => {
 })
 
 app.use('/recipe/:id', function (req, res) {
-    const url = `https://api.spoonacular.com/recipes/${req.params.id}/information?apiKey=45bfd0648ab74f6c8cccb1aae6399519&includeNutrition=false`
+    const url = `https://api.spoonacular.com/recipes/${req.params.id}/information?apiKey=81b70d1ee3be478cb65dc0b78bb19e6e&includeNutrition=false`
     data = ""
 
     https.get(url, function (https_res) {
