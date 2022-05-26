@@ -210,7 +210,7 @@ app.post("/recipe/writeReview", auth, (req, res) => {
 })
 
 app.use('/recipe/:id', function (req, res) {
-    const url = `https://api.spoonacular.com/recipes/${req.params.id}/information?apiKey=45bfd0648ab74f6c8cccb1aae6399519&includeNutrition=false`
+    const url = `https://api.spoonacular.com/recipes/${req.params.id}/information?apiKey=904ba18229eb40dba7b8e694b40926ae&includeNutrition=false`
     data = ""
 
     https.get(url, function (https_res) {
