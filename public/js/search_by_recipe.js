@@ -15,7 +15,7 @@ async function search_by_recipe() {
 
     await $.ajax({
         type: "get",
-        url: `https://api.spoonacular.com/recipes/complexSearch?apiKey=91c165549f554a20bf3f4a83ac0e2bf1&query=${searchItem}&number=10`,
+        url: `https://api.spoonacular.com/recipes/complexSearch?apiKey=81b70d1ee3be478cb65dc0b78bb19e6e&query=${searchItem}&number=10`,
         success: async function (data) {
             console.log("GET request to Spoonacular API made for a recipe");
             for (i = 0; i < data.results.length; i++) {
