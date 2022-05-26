@@ -11,10 +11,10 @@
 </head>
 
 <body>
-    <nav>
-        <div class="navbar">
-            <img src="img/logo2.png" onclick="location.href='/'" height="10%" width="10%">
-            <a>Recify</a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" onclick="location.href='/'"> <img src="img/logo2.png" alt="" width="10%" height="10%" class="d-inline-block align-text-top">
+                Recify</a>
             <input type="checkbox" id="check_box" />
             <label for="check_box">
                 <span></span>
@@ -49,20 +49,16 @@
         </div>
     </div>
 
-    <footer>
-
-        
-        <div id="footer_containter">
-            <h5>
-                Copyright © Your Website 2022
-            </h5>
-        </div>
-
-        <form id="footerForm" action="logout" method="POST" class="logoutForm" onsubmit="DoLogoutForm__submit(this); return false;">
-            <input type="submit" class="btn" value="Log Out"/>
-            <button type="button" class="btn" onclick="location.href='/getReviews'">Reviews</button>
-          </form>
-    </footer>
+    <div class="container align-content-end footer">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+          <div class="col-md-4 d-flex align-items-center">
+            <a href="/" id="footer_image" class="text-muted text-decoration-none lh-1">
+                <img src="img/logo.png" alt="" width="80%" height="10%" class="d-inline-block align-text-top">
+            </a>
+            <span class="text">© 2022 Company, Inc</span>
+          </div>
+        </footer>
+    </div>
 
     <script src="app.js"></script>
 </body>
