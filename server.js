@@ -183,7 +183,7 @@ app.get("/getReviews", (req, res)  => {
     if (!req.cookies.x_auth) {
         return res.sendFile(__dirname + '/public/login.html');
     } else {
-    reviewModel.find().then(results => {
+    reviewModel.find().sort({ _id: -1 }).then(results => {
         res.render('timeline.ejs', { result: results })
     })
     .catch(err => console.error(error))

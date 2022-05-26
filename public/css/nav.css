@@ -45,28 +45,51 @@
     transform: rotate(-45deg);
 }
 
-#check_box + label {
+#check_box+label {
     position: relative;
     display: block;
     width: 60px;
     height: 30px;
     cursor: pointer;
     z-index: 2;
-  }
-  
-  #side_menu {
+}
+
+#side_menu {
     position: fixed;
     width: 300px;
     height: 100%;
-    background-color: rgb(31, 214, 113);
+    background-image: linear-gradient(to right, #38A3A5, #22577A);
     right: -300px;
     transition: all 300ms;
     z-index: 1;
     top: 0px;
     padding: 60px 20px 20px 20px;
     box-sizing: border-box;
-  }
-  
-  #check_box:checked + label + #side_menu {
+}
+
+#check_box:checked+label+#side_menu {
     right: 0;
-  }
+}
+
+ul {
+    list-style: none;
+}
+
+
+
+li .atag{
+    font-size: 20pt;
+    text-decoration: none;
+}
+
+li .atag:link, .atag:visited{
+    font-size: 20pt;
+    text-decoration: none;
+    color:white;
+}
+
+li .atag:hover {
+    font-size: 20pt;
+    text-decoration: underline;
+    color:white;
+}
