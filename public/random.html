@@ -16,8 +16,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <style>
-    
-
         .bg-primary {
             /*Navbar*/
             background-color: #22577A !important;
@@ -52,6 +50,8 @@
 
         main {
             width: 95%;
+            margin: 0%;
+            margin-left: 1.5%;
         }
 
         .recipes_container {
@@ -59,7 +59,7 @@
             flex-direction: row;
             justify-content: space-between;
             width: 100%;
-            border: 5px solid #38A3A5 ;
+            border: 5px solid #38A3A5;
             padding: 1%;
             margin: 1%;
             margin-top: 5%;
@@ -67,7 +67,7 @@
             background-color: #80ED99
         }
 
-        .recipes_container + .recipes_container {
+        .recipes_container+.recipes_container {
             margin-top: 0%;
         }
 
@@ -81,14 +81,13 @@
         .recipe_img_box {
             display: flex;
             flex-direction: column;
-            /* border: 2px solid #38A3A5 ; */
             padding: 1%;
             margin: 1%;
             background-color: #80ED99;
             text-align: center;
         }
 
-        
+
         .recipe_name {
             padding: 2%;
             padding-bottom: 4%;
@@ -117,11 +116,10 @@
         }
 
         #footer_image {
-           
+
             height: 100%;
             width: 10%;
         }
-
     </style>
 
 </head>
@@ -145,20 +143,14 @@
 
     <div class="container align-content-end footer">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-          <div class="col-md-4 d-flex align-items-center">
-            <a href="/" id="footer_image" class="text-muted text-decoration-none lh-1">
-                <img src="img/logo.png" alt="" width="80%" height="10%" class="d-inline-block align-text-top">
-            </a>
-            <span class="text">© 2022 Company, Inc</span>
-          </div>
-
-          <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-            <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
-            <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
-            <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
-          </ul>
+            <div class="col-md-4 d-flex align-items-center">
+                <a href="/" id="footer_image" class="text-muted text-decoration-none lh-1">
+                    <img src="img/logo.png" alt="" width="80%" height="10%" class="d-inline-block align-text-top">
+                </a>
+                <span class="text">© 2022 Company, Inc</span>
+            </div>
         </footer>
-      </div>
+    </div>
 
 
 

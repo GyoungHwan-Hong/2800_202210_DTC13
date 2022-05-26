@@ -122,11 +122,15 @@
 
         h1 {
             color: #22577A;
-            
+
         }
 
         h3 {
             margin-top: 8%;
+        }
+
+        .two-buttons {
+            margin-top: 20%;
         }
 
         .footer {
@@ -135,11 +139,10 @@
         }
 
         #footer_image {
-           
-           height: 100%;
-           width: 10%;
-       }
 
+            height: 100%;
+            width: 10%;
+        }
     </style>
 
 </head>
@@ -148,17 +151,18 @@
 
     <nav class="navbar navbar-expand-lg navbar-light bg-primary" id="navbar">
         <div class="container-fluid">
-            <a class="navbar-brand" href=""> <img src="img/logo2.png" alt="" width="10%" height="10%" class="d-inline-block align-text-top">
+            <a class="navbar-brand" href=""> <img src="img/logo2.png" alt="" width="10%" height="10%"
+                    class="d-inline-block align-text-top">
                 Recify </a>
-            
+
 
         </div>
     </nav>
 
     <div class="container-fluid bg p-4">
 
-        <h1 class="display-4 fw-bold">Welcome back, User </h1>
-<!--         <span id="name-goes-here2"></span>  Add this in back later once we implement name-->
+        <h1 class="display-4 fw-bold">Welcome back</h1>
+        <!--         <span id="name-goes-here2"></span>  Add this in back later once we implement name-->
 
         <hr>
 
@@ -176,7 +180,7 @@
         <div class="card popular" style="border: none;">
             <a class="card-body btn" href="trendy.html">
                 <h3 class="card-title" style="margin-top: 0;">View Popular Recipes</h3>
-                <p class="card-text">View our user's favourite recipes</p>
+                <p class="card-text">View our user's favourite recipes.</p>
             </a>
         </div>
 
@@ -188,37 +192,42 @@
         </div>
 
         <div class="card settings" style="border: none;">
-            <a class="card-body btn">
-                <h3 class="card-title">Settings</h3>
-                <p class="card-text"></p>
+            <a class="card-body btn" href="search_by_recipe.html">
+                <h3 class="card-title">Search by recipes</h3>
+                <p class="card-text">Find recipes based on keywords in their names.</p>
             </a>
         </div>
     </section>
 
+    <div class="container two-buttons">
+        <form id="footerForm" action="logout" method="POST" class="logoutForm"
+            onsubmit="DoLogoutForm__submit(this); return false;">
+            <input type="submit" class="btn" value="Log Out" />
+
+        </form>
+
+        <a class="btn">Timeline</a>
+
+
+    </div>
+
+
+
 
     <div class="container align-content-end footer">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-          <div class="col-md-4 d-flex align-items-center">
-            <a href="/" id="footer_image" class="text-muted text-decoration-none lh-1">
-                <img src="img/logo.png" alt="" width="80%" height="10%" class="d-inline-block align-text-top">
-            </a>
-            <span class="text">© 2022 Company, Inc</span>
-          </div>
-      
-          <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-            <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
-            <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
-            <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
-          </ul>
+            <div class="col-md-4 d-flex align-items-center">
+                <a href="/" id="footer_image" class="text-muted text-decoration-none lh-1">
+                    <img src="img/logo.png" alt="" width="80%" height="10%" class="d-inline-block align-text-top">
+                </a>
+                <span class="text">© 2022 Company, Inc</span>
+            </div>
         </footer>
-      </div>
+    </div>
 
 
 
-        <form id="footerForm" action="logout" method="POST" class="logoutForm" onsubmit="DoLogoutForm__submit(this); return false;">
-            <input type="submit" class="btn" value="Log Out"/>
 
-        </form>
 
 
     <script src="app.js"></script>

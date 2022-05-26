@@ -1,18 +1,18 @@
 
-// function visibility() {
-//     console.log("AAAAAAAAAAAAAAAAAAAAA");
-//     document.getElementsByTagName("main").visibility = "visible";
-// }
-
 async function search_by_recipe() {
     console.log("search by recipe is called!");
 
     searchItem = $("#searchRecipeItem").val();
     console.log(searchItem);
 
-
+    const main = document.querySelector("main");
+    const classes = main.classList;
+    classes.add("d");
+    classes.remove("test");
+    main.textContent = classes;
+   
     $("main").empty();
-    
+
     await $.ajax({
         type: "get",
         url: `https://api.spoonacular.com/recipes/complexSearch?apiKey=91c165549f554a20bf3f4a83ac0e2bf1&query=${searchItem}&number=10`,
@@ -22,7 +22,7 @@ async function search_by_recipe() {
                 console.log(data.results[i]["title"]);
                 $("main").append(`<div class='recipes'> 
                 <img src="${data.results[i].image}">
-                <a href="/recipe/${data.results[i].id}">${data.results[i].title}</a>
+                <a href="/recipe/${data.results[i].id}" class="recipe-name">${data.results[i].title}</a>
                 </div>`);
             }
         }
@@ -31,12 +31,8 @@ async function search_by_recipe() {
 
 
 function setup() {
-    $("main").hide;
 
-    
     $("#submit").click(() => {
-        $("main").show;
-        // visibility();
         search_by_recipe();
     })
 }

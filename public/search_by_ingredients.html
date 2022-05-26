@@ -68,15 +68,15 @@
         }
 
         #cards {
-
             width: 70%;
         }
 
         .recipes {
-
+            display: flex;
+            flex-direction: column;
+            padding: 1%;
+            margin: 1%;
             text-align: center;
-            padding: 20px;
-            font-size: 25px;
         }
 
         h3 {
@@ -99,6 +99,37 @@
             height: 1px;
             background-image: linear-gradient(to right, transparent, rgb(48, 49, 51), transparent);
         }
+
+        main {            
+            border: 5px solid #38A3A5;
+            padding: 1%;
+            margin: 5%;
+            background-color: #80ED99;
+        }
+
+        .test {
+            display: none;
+        }
+
+        .recipe-name {
+            padding: 2%;
+            padding-bottom: 4%;
+            background-color: #C7F9CC;
+            border-bottom: 2px solid #22577A;
+            border-left: 2px solid #22577A;
+            border-right: 2px solid #22577A;
+            border-radius: 0px 0px 25% 25%;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: large;
+            color: #22577A;
+        }
+
+        .recipe-name:hover {
+            color: #C7F9CC;
+            background-color: #22577A;
+        }
+
     </style>
 </head>
 
@@ -130,16 +161,6 @@
         <label for="thirdItem">Third Ingredient</label>
         <input type="text" id="thirdItem" name="thirdItem" placeholder="Enter third ingredient">
 
-        <label for="cuisineStyle">Choose a Cuisine Style</label>
-        <select id="cuisineStyle" name="cuisineStyle">
-            <option value="Korean">Korean</option>
-            <option value="Canadian">Canadian</option>
-            <option value="Chinese">Chinese</option>
-            <option value="Indian">Indian</option>
-            <option value="French">French</option>
-            <option value="Japanese">Japanese</option>
-        </select>
-
         <button id="submit" class="btn">Search</button>
 
 
@@ -147,9 +168,9 @@
 
     <!-- results go here -->
 
-    <results>
+    <main class="test">
 
-    </results>
+    </main>
 
     <!-- footer -->
     <div class="container align-content-end footer">
@@ -160,18 +181,6 @@
                 </a>
                 <span class="text">© 2022 Company, Inc</span>
             </div>
-
-            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-                <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24">
-                            <use xlink:href="#twitter"></use>
-                        </svg></a></li>
-                <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24">
-                            <use xlink:href="#instagram"></use>
-                        </svg></a></li>
-                <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24">
-                            <use xlink:href="#facebook"></use>
-                        </svg></a></li>
-            </ul>
         </footer>
     </div>
 

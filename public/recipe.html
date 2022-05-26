@@ -40,7 +40,7 @@
             text-align: center;
             align-items: center;
             color: #22577A;
-            
+
         }
 
         #food_image {
@@ -142,20 +142,14 @@
 
     <div class="container align-content-end footer">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-          <div class="col-md-4 d-flex align-items-center">
-            <a href="/" id="footer_image" class="text-muted text-decoration-none lh-1">
-                <img src="img/logo.png" alt="" width="80%" height="10%" class="d-inline-block align-text-top">
-            </a>
-            <span class="text">© 2022 Company, Inc</span>
-          </div>
-
-          <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-            <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
-            <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
-            <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
-          </ul>
+            <div class="col-md-4 d-flex align-items-center">
+                <a href="/" id="footer_image" class="text-muted text-decoration-none lh-1">
+                    <img src="img/logo.png" alt="" width="80%" height="10%" class="d-inline-block align-text-top">
+                </a>
+                <span class="text">© 2022 Company, Inc</span>
+            </div>
         </footer>
-      </div>
+    </div>
 
 
 
@@ -170,7 +164,8 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form name="reviewform" id="reviewform" method="post" action="writeReview" onsubmit="DoReviewForm__submit(this); return false;">
+                    <form name="reviewform" id="reviewform" method="post" action="writeReview"
+                        onsubmit="DoReviewForm__submit(this); return false;">
                         <fieldset>
                             <input type="radio" name="rating" value="5" id="rate1"><label for="rate1">⭐</label>
                             <input type="radio" name="rating" value="4" id="rate2"><label for="rate2">⭐</label>
@@ -182,7 +177,7 @@
 
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <input type="submit" class="btn btn-primary" value="Sumbit"/>
+                            <input type="submit" class="btn btn-primary" value="Sumbit" />
                         </div>
 
                     </form>
@@ -193,7 +188,9 @@
     </div>
 
     <script src="app.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
 
 </body>
 

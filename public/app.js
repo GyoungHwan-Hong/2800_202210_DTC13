@@ -1,6 +1,6 @@
 async function Trendy_contents_change_Main() {
     await $.ajax({
-        url: "https://api.spoonacular.com/recipes/complexSearch?apiKey=598dbdb711b34618b52ffcd93f1e1104&type=maincourse&maxReadyTime=15&number=5",
+        url: "https://api.spoonacular.com/recipes/complexSearch?apiKey=904ba18229eb40dba7b8e694b40926ae&type=maincourse&maxReadyTime=15&number=5",
         dataType: "json",
         success: function (data) {
             $("#Trendy_Food_List").empty();
@@ -15,7 +15,7 @@ async function Trendy_contents_change_Main() {
 
 async function Trendy_contents_change_Appetizer() {
     await $.ajax({
-        url: "https://api.spoonacular.com/recipes/complexSearch?apiKey=598dbdb711b34618b52ffcd93f1e1104&type=appetizer&maxReadyTime=15&number=5",
+        url: "https://api.spoonacular.com/recipes/complexSearch?apiKey=904ba18229eb40dba7b8e694b40926ae&type=appetizer&maxReadyTime=15&number=5",
         dataType: "json",
         success: function (data) {
             $("#Trendy_Food_List").empty();
@@ -30,7 +30,7 @@ async function Trendy_contents_change_Appetizer() {
 
 async function Trendy_contents_change_Dessert() {
     await $.ajax({
-        url: "https://api.spoonacular.com/recipes/complexSearch?apiKey=598dbdb711b34618b52ffcd93f1e1104&type=dessert&maxReadyTime=15&number=5",
+        url: "https://api.spoonacular.com/recipes/complexSearch?apiKey=904ba18229eb40dba7b8e694b40926ae&type=dessert&maxReadyTime=15&number=5",
         dataType: "json",
         success: function (data) {
             $("#Trendy_Food_List").empty();
