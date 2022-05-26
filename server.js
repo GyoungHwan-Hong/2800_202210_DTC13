@@ -47,7 +47,7 @@ app.get('/', function (req, res) {
     if (req.cookies.x_auth) {
         res.sendFile(__dirname + '/public/main.html');
     } else {
-        res.sendFile(__dirname + '/public/login.html');
+        res.sendFile(__dirname + '/public/index.html');
     }
 })
 
