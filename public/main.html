@@ -29,6 +29,7 @@
             text-decoration: none;
             white-space: nowrap;
             color: #C7F9CC !important;
+            width: 80%
         }
 
 
@@ -123,6 +124,7 @@
 
         h1 {
             color: #22577A;
+            display: inline;
 
         }
 
@@ -145,9 +147,28 @@
             width: 10%;
         }
         #name-goes-here2 {
-            font-size: 25pt;
+            font-size: 28pt;
             color: #22577A;
             width: 100%;
+            font-weight: bold;
+
+        }
+
+        .divider {
+            position: relative;
+            margin-bottom: 8%;
+            height: 1px;
+        }
+
+        .div-transparent:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 5%;
+            right: 5%;
+            width: 90%;
+            height: 1px;
+            background-image: linear-gradient(to right, transparent, rgb(48, 49, 51), transparent);
         }
 
     </style>
@@ -156,10 +177,10 @@
 </head>
 
 <body>
-    <nav>
-        <div class="navbar">
-            <img src="img/logo2.png" onclick="location.href='/'" height="10%" width="10%">
-            <a>Recify</a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand"> <img src="img/logo2.png" alt="" width="10%" height="10%" class="d-inline-block align-text-top">
+                Recify</a>
             <input type="checkbox" id="check_box" />
             <label for="check_box">
                 <span></span>
@@ -178,10 +199,12 @@
 
     <div class="container-fluid bg p-4">
 
-        <h1 class="display-4 fw-bold">Welcome back</h1>
+        <h1 class="display-4 fw-bold">Welcome back, </h1>
         <span id="name-goes-here2"></span>
 
-        <hr>
+       
+
+        <div class="divider div-transparent div-arrow-down"></div>
 
 
     </div>
