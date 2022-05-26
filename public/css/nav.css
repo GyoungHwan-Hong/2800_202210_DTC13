@@ -79,16 +79,19 @@ ul {
 
 
 li .atag{
+    pointer-events: auto;
     font-size: 18pt;
     text-decoration: none;
 }
 
 li .atag:link, .atag:visited{
+    pointer-events: auto;
     text-decoration: none;
     color:#C7F9CC ;
 }
 
 li .atag:hover {
+    pointer-events: auto;
     text-decoration: underline;
     color:#a6ceaa;
 }

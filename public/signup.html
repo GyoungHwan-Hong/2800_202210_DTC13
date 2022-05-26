@@ -102,27 +102,51 @@
     </div>
 </nav>
 
-  <form action="doJoin" method="POST" class="joinForm" onsubmit="DoJoinForm__submit(this); return false;">
+  <form action="doJoin" method="POST" name="myForm" class="joinForm" onsubmit="return validateForm()">
 
     <h2>Sign Up</h2>
     <div class="textForm">
-      <input name="ID" type="text" class="id" placeholder="Username">
+      <input name="ID" type="text" class="id" placeholder="Username*">
     </div>
     <div class="textForm">
-      <input name="password" type="password" class="pw" placeholder="Password">
+      <input name="password" type="password" class="pw" placeholder="Password*">
     </div>
     <div class="textForm">
-      <input name="nickname" type="text" class="name" placeholder="Full Name">
+      <input name="nickname" type="text" class="name" placeholder="Full Name*">
     </div>
     <div class="textForm">
-      <input name="email" type="text" class="email" placeholder="Email">
+      <input name="email" type="text" class="email" placeholder="Email*">
     </div>
     <div class="textForm">
-      <input name="cellphone" type="number" class="cellphoneNo" placeholder="Phone Number">
+      <input name="cellphone" type="number" class="cellphoneNo" placeholder="Phone Number*">
     </div>
     <input type="submit" class="btn btn-primary" value="Create Account" />
   </form>
 
+
+  <script type="text/javascript">
+    function validateForm() {
+      var a = document.forms["myForm"]["ID"].value;
+      var b = document.forms["myForm"]["password"].value;
+      var c = document.forms["myForm"]["nickname"].value;
+      var d = document.forms["myForm"]["email"].value;
+      var d = document.forms["myForm"]["cellphone"].value;
+      if (a == null || a == "", b == null || b == "", c == null || c == "", d == null || d == "") {
+        alert("Please Fill All Required Field");
+        return false;
+      }
+
+      var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+      if ( d.match(validRegex) ) {
+        alert("Please Check your email.");
+        return false;
+      } else {
+        alert("Valid email address!");
+        return true;
+      }
+    }
+  </script>
 
   <div class="container align-content-end footer">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
