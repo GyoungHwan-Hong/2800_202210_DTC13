@@ -186,7 +186,7 @@ app.get("/getReviews", (req, res)  => {
     reviewModel.find().sort({ _id: -1 }).then(results => {
         res.render('timeline.ejs', { result: results })
     })
-    .catch(() => console.error(error))
+    .catch(err => console.error(error))
     }
 })
 
