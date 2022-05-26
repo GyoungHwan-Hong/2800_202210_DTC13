@@ -1,81 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/search_ingredients.css">
+    <link rel="stylesheet" href="./css/search_ingredients.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>Recify Search By Ingredients</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+
+    <style>
+        .bg-primary {
+            /*Navbar*/
+            background-color: #22577A !important;
+            border-bottom: 5px solid #38A3A5 !important;
+        }
+
+        .navbar-brand {
+            padding-top: 0.3125rem;
+            padding-bottom: 0.3125rem;
+            margin-right: 1rem;
+            font-size: 1.25rem;
+            text-decoration: none;
+            white-space: nowrap;
+            color: #C7F9CC !important;
+        }
+
+        body {
+            background-color: #C7F9CC;
+            color: #22577A;
+            height: 100%;
+        }
+
+        #form {
+            margin-top: 10%;
+            width: 95%;
+
+        }
+
+        .footer {
+            position: relative;
+            bottom: 0px;
+        }
+
+        #footer_image {
+
+            height: 100%;
+            width: 10%;
+        }
+
+        .btn {
+            margin-top: 10%;
+            background-color: #80ED99;
+            color: #22577A;
+            border: 2px solid #22577A !important;
+            border-radius: 1em;
+            width: 50%;
+        }
+
+        .btn:hover {
+            background-color: #22577A;
+            color: #C7F9CC;
+        }
+
+        #cards {
+            width: 70%;
+        }
+
+        .recipes {
+            display: flex;
+            flex-direction: column;
+            padding: 1%;
+            margin: 1%;
+            text-align: center;
+        }
+
+        h3 {
+            margin-bottom: 8%;
+        }
+
+        .divider {
+            position: relative;
+            margin-bottom: 8%;
+            height: 1px;
+        }
+
+        .div-transparent:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 5%;
+            right: 5%;
+            width: 90%;
+            height: 1px;
+            background-image: linear-gradient(to right, transparent, rgb(48, 49, 51), transparent);
+        }
+
+        main {            
+            border: 5px solid #38A3A5;
+            padding: 1%;
+            margin: 5%;
+            background-color: #80ED99;
+        }
+
+        .test {
+            display: none;
+        }
+
+        .recipe-name {
+            padding: 2%;
+            padding-bottom: 4%;
+            background-color: #C7F9CC;
+            border-bottom: 2px solid #22577A;
+            border-left: 2px solid #22577A;
+            border-right: 2px solid #22577A;
+            border-radius: 0px 0px 25% 25%;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: large;
+            color: #22577A;
+        }
+
+        .recipe-name:hover {
+            color: #C7F9CC;
+            background-color: #22577A;
+        }
+
+    </style>
+<link rel="stylesheet" href="css/nav.css">
 </head>
+
 <body>
-    <!-- nav -->
     <nav>
-        <div class="logo">
-            <img class="logo_img" src="/img/logo.png" onclick="location.href='index.html'">
-        </div>
-        <div class="logo2">
-            <h2>Recify</h2>
-        </div>
-        <div class="burger">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
+        <div class="navbar">
+            <img src="img/logo2.png" onclick="location.href='/'" height="10%" width="10%">
+            <a>Recify</a>
+            <input type="checkbox" id="check_box" />
+            <label for="check_box">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <div id="side_menu">
+                <ul>
+                    <li><a class="atag" href="/profile">Profile</a></li>
+                    <li><a class="atag" href="/getReviews">Recent Reviews</a></li>
+                    <li><a class="atag" href="/logout">Logout</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 
-
     <!-- Search form (from w3 school how-to contact form) -->
 
-    <div class="container">      
-          <label for="firstItem">First Ingredient</label>
-          <input type="text" id="firstItem" name="firstItem" placeholder="Kimchi">
-      
-          <label for="secondItem">Second Ingredient</label>
-          <input type="text" id="secondItem" name="secondItem" placeholder="Rice">
+    <div id="form" class="container">
+        <h3>Search By Ingredients</h3>
 
-          <label for="thirdItem">Third Ingredient</label>
-          <input type="text" id="thirdItem" name="thirdItem" placeholder="Eggs">
-      
-          <label for="cuisineStyle">Cuisine Style</label>
-          <select id="cuisineStyle" name="cuisineStyle">
-            <option value="Korean">Korean</option>
-            <option value="Canadian">Canadian</option>
-            <option value="Chinese">Chinese</option>
-            <option value="Indian">Indian</option>
-            <option value="French">French</option>
-            <option value="Japanese">Japanese</option>
-            <option value="Alien">Alien?!?!</option>
-          </select>
-           
-          <button id="submit">Search</button>
-      
-        </form>
-      </div>
+        <div class="divider div-transparent div-arrow-down"></div>
+
+        <label for="firstItem">First Ingredient</label>
+        <input type="text" id="firstItem" name="firstItem" placeholder="Enter first ingredient">
+
+        <label for="secondItem">Second Ingredient</label>
+        <input type="text" id="secondItem" name="secondItem" placeholder="Enter second ingredient">
+
+        <label for="thirdItem">Third Ingredient</label>
+        <input type="text" id="thirdItem" name="thirdItem" placeholder="Enter third ingredient">
+
+        <button id="submit" class="btn">Search</button>
+
+
+    </div>
 
     <!-- results go here -->
 
-    <results>
-        
-    </results>
+    <main class="test">
+
+    </main>
 
     <!-- footer -->
-    <footer>
+    <div class="container align-content-end footer">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <div class="col-md-4 d-flex align-items-center">
+                <a href="/" id="footer_image" class="text-muted text-decoration-none lh-1">
+                    <img src="img/logo.png" alt="" width="80%" height="10%" class="d-inline-block align-text-top">
+                </a>
+                <span class="text">© 2022 Company, Inc</span>
+            </div>
+        </footer>
+    </div>
 
-        
-        <div id="footer_containter">
-            <h5>
-                Copyright © Your Website 2022
-            </h5>
-        </div>
-
-        <form id="footerForm" action="logout" method="POST" class="logoutForm" onsubmit="DoLogoutForm__submit(this); return false;">
-            <input type="submit" class="btn" value="Log Out"/>
-            <button type="button" class="btn" onclick="location.href='/getReviews'">Reviews</button>
-          </form>
 
     <!-- js -->
-    <script src="/js/search_by_ingredients.js"></script>
+    <script src="./js/search_by_ingredients.js"></script>
+
 
 </body>
+
 </html>

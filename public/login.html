@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
+    <!-- Required meta tags -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,25 +12,143 @@
     <link rel="stylesheet" tyep="text/css" href="login.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+    <title>Recify</title>
+
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--      <link rel="stylesheet" type="text/css" href="style.css"> -->
+
+
+    <style>
+        .bg-primary {
+            /*Navbar*/
+            background-color: #22577A !important;
+            border-bottom: 5px solid #38A3A5 !important;
+        }
+
+        .navbar-brand {
+            padding-top: 0.3125rem;
+            padding-bottom: 0.3125rem;
+            margin-right: 1rem;
+            font-size: 1.25rem;
+            text-decoration: none;
+            white-space: nowrap;
+            color: #C7F9CC !important;
+        }
+
+        body {
+            background-color: #C7F9CC;
+            color: black;
+        }
+
+        .bg-body {
+            background-color: #57CC99 !important;
+            color: #22577A;
+        }
+
+        .loginForm {
+            background-color: #FFFFFF;
+            text-align: center;
+            border-radius: 15px;
+            width: 95%;
+        }
+
+
+        .btn-primary {        
+            color: #22577A;    
+            border: 2px solid #22577A !important;
+            border-radius: 1em;
+            background: none;
+            width: 50%;
+            margin-right: 30%;
+
+        }
+
+        .login-btn {
+            background-color: #80ED99 !important;
+
+        }
+
+        .signup-btn {
+            background-color: #80edcc !important;
+            
+        }
+
+        .btn-primary:hover {
+            background-color: #22577A !important;
+            color: #80ED99;
+        }
+
+
+        .footer {
+            position: absolute;
+            bottom: 0px;
+        }
+
+        #footer_image {
+
+            height: 100%;
+            width: 10%;
+        }
+    </style>
+
+<link rel="stylesheet" href="css/nav.css">
 </head>
 
 <body>
+    <nav>
+        <div class="navbar">
+            <img src="img/logo2.png" onclick="location.href='/'" height="10%" width="10%">
+            <a>Recify</a>
+            <input type="checkbox" id="check_box" />
+            <label for="check_box">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <div id="side_menu">
+                <ul>
+                    <li><a class="atag" href="/profile">Profile</a></li>
+                    <li><a class="atag" href="/getReviews">Recent Reviews</a></li>
+                    <li><a class="atag" href="/logout">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
 
     <form action="doLogin" method="POST" class="loginForm" onsubmit="DoLoginForm__submit(this); return false;">
-        <input type="hidden" name="loginPwReal"/>
-                                                                                                 
-        <h2>Recify</h2>
+        <input type="hidden" name="loginPwReal" />
+
+        <h2>Login</h2>
+        <!--         <img class="logo_img" src="img/logo.png" onclick="location.href='index.html'"> -->
         <div class="idForm">
-          <input name="ID" type="text" class="id" placeholder="ID">
+            <input name="ID" type="text" class="id" placeholder="ID">
         </div>
         <div class="passForm">
-          <input name="password" type="password" class="pw" placeholder="Password">
+            <input name="password" type="password" class="pw" placeholder="Password">
         </div>
-        <input type="submit" class="btn" value="Log In"/>
-        <input type="button" class="btn" value="Sign Up" onclick="location.href='signup.html'"/>
-    
-      </form>
+        <input type="submit" class="btn btn-primary border login-btn" value="Log In" />
+        <input type="button" class="btn btn-primary border signup-btn" value="Sign Up"
+            onclick="location.href='signup.html'" />
+
+    </form>
+
+
+    <div class="container align-content-end footer">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <div class="col-md-4 d-flex align-items-center">
+                <a href="/" id="footer_image" class="text-muted text-decoration-none lh-1">
+                    <img src="img/logo.png" alt="" width="80%" height="10%" class="d-inline-block align-text-top">
+                </a>
+                <span class="text">© 2022 Company, Inc</span>
+            </div>
+        </footer>
+    </div>
 
 </body>
-
 </html>

@@ -1,39 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Recify</title>
-    <link rel="stylesheet" tyep="text/css" href="signup.css">
+  <title>Recify</title>
+  <link rel="stylesheet" tyep="text/css" href="signup.css">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-</head>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-<body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-    <form action="doJoin" method="POST" class="joinForm" onsubmit="DoJoinForm__submit(this); return false;">
-                                                                                               
-        <h2>Sign Up</h2>
-        <div class="textForm">
-          <input name="ID" type="text" class="id" placeholder="ID">
-          </input>
-        </div>
-        <div class="textForm">
-          <input name="password" type="password" class="pw" placeholder="Password">
-        </div>
-        <div class="textForm">
-          <input name="nickname" type="text" class="name" placeholder="Nick Name">
-        </div>
-         <div class="textForm">
-          <input name="email" type="text" class="email" placeholder="Email">
-        </div>
-        <div class="textForm">
-          <input name="cellphone" type="number" class="cellphoneNo" placeholder="Phone Number">
-        </div>
-        <input type="submit" class="btn" value="J O I N"/>
-      </form>
+  <style>
+    .bg-primary {
+      /*Navbar*/
+      background-color: #22577A !important;
+      border-bottom: 5px solid #38A3A5 !important;
+    }
+
+    .navbar-brand {
+      padding-top: 0.3125rem;
+      padding-bottom: 0.3125rem;
+      margin-right: 1rem;
+      font-size: 1.25rem;
+      text-decoration: none;
+      white-space: nowrap;
+      color: #C7F9CC !important;
+    }
+
+    body {
+      background-color: #C7F9CC;
+      color: black;
+    }
+
+    .bg-body {
+      background-color: #57CC99 !important;
+      color: #22577A;
+    }
+
+
+    .joinForm {
+      margin-top: 20%;
+      text-align: center;
+      border-radius: 15px;
+      width: 95%;
+    }
+
+    .btn-primary {
+      background-color: #80ED99 !important;
+      color: #22577A;
+      border: 2px solid #22577A !important;
+      border-radius: 1em;
+      background: none;
+      width: 50%;
+      margin-right: 30%;
+
+    }
+
+    .btn-primary:hover {
+      background-color: #22577A !important;
+      color: #C7F9CC;
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 0px;
+    }
+
+    #footer_image {
+
+      height: 100%;
+      width: 10%;
+    }
+  </style>
+    <link rel="stylesheet" type="text/css" href="/css/nav.css">
+  </head>
+  
+  <body>
+      <nav>
+          <div class="navbar">
+              <img src="/img/logo2.png" onclick="location.href='/'" height="10%" width="10%">
+              <a>Recify</a>
+              <input type="checkbox" id="check_box" />
+              <label for="check_box">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+              </label>
+              <div id="side_menu">
+                  <ul>
+                      <li><a class="atag" href="/profile">Profile</a></li>
+                      <li><a class="atag" href="/getReviews">Recent Reviews</a></li>
+                      <li><a class="atag" href="/logout">Logout</a></li>
+                  </ul>
+              </div>
+          </div>
+      </nav>
+
+  <form action="doJoin" method="POST" class="joinForm" onsubmit="DoJoinForm__submit(this); return false;">
+
+    <h2>Sign Up</h2>
+    <div class="textForm">
+      <input name="ID" type="text" class="id" placeholder="Username">
+    </div>
+    <div class="textForm">
+      <input name="password" type="password" class="pw" placeholder="Password">
+    </div>
+    <div class="textForm">
+      <input name="nickname" type="text" class="name" placeholder="Full Name">
+    </div>
+    <div class="textForm">
+      <input name="email" type="text" class="email" placeholder="Email">
+    </div>
+    <div class="textForm">
+      <input name="cellphone" type="number" class="cellphoneNo" placeholder="Phone Number">
+    </div>
+    <input type="submit" class="btn btn-primary" value="Create Account" />
+  </form>
+
+
+  <div class="container align-content-end footer">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+      <div class="col-md-4 d-flex align-items-center">
+        <a href="/" id="footer_image" class="text-muted text-decoration-none lh-1">
+          <img src="img/logo.png" alt="" width="80%" height="10%" class="d-inline-block align-text-top">
+        </a>
+        <span class="text">© 2022 Company, Inc</span>
+      </div>
+    </footer>
+  </div>
 
 </body>
 

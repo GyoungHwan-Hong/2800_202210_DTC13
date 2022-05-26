@@ -45,11 +45,9 @@ app.listen(process.env.PORT || 5000, function (err) {
 
 app.get('/', function (req, res) {
     if (req.cookies.x_auth) {
-        console.log("Test");
-        res.sendFile(__dirname + '/public/index.html');
+        res.sendFile(__dirname + '/public/main.html');
     } else {
-        console.log("Hello, I am stressful.");
-        res.sendFile(__dirname + '/public/login.html');
+        res.sendFile(__dirname + '/public/index.html');
     }
 })
 
@@ -99,7 +97,7 @@ app.post("/doLogin", (req, res) => {
                     .then((user) => {
                         res.cookie("userNickName", user.nickname);
                         res.cookie("x_auth", user.token);
-                        res.sendFile(__dirname + '/public/index.html');
+                        res.sendFile(__dirname + '/public/main.html');
                     })
                     .catch((err) => {
                         res.status(400).send(err);
@@ -120,11 +118,12 @@ app.get("/api/user/auth", auth, (req, res) => {
     });
 });
 
-app.post("/logout", auth, (req, res) => {
+app.get("/logout", auth, (req, res) => {
 
     User.findOneAndUpdate({ _id: req.user._id }, { token: "" }, (err, user) => {
-        if (err) return res.json({ success: false, err });
+        if (err) return res.sendFile(__dirname + '/public/login.html');
         res.clearCookie("x_auth");
+        res.clearCookie("userNickName");
         return res.sendFile(__dirname + '/public/login.html');
     });
 });
@@ -140,11 +139,55 @@ const reviewSchema = new mongoose.Schema({
 
 const reviewModel = mongoose.model("reviews", reviewSchema);
 
-app.get('/getReviews', (req, res)  => {
-    reviewModel.find().then(results => {
+
+// app.get("/profile", (req, res)  => {
+//     if (!req.cookies.x_auth) {
+//         return res.sendFile(__dirname + '/public/login.html');
+//     } else {
+//         User.find({ ID: req.user.ID }, function (err, data) {
+//             if (err) {
+//               console.log("Error " + err);
+//             } else {
+//               console.log("Data " + data);
+//             }
+//             res.render("profile.ejs", {
+//               "id": data[0].ID,
+//               "email": data[0].email,
+//               "nickname": data[0].nickname,
+//               "phone": data[0].cellphone
+//             });
+//           });
+//     }
+// })
+
+app.get('/profile', auth, function (req, res) {
+
+    //console.log("received a request for "+ req.params.city_name);
+    User.find({ ID: req.user.ID }, function (err, data) {
+      if (err) {
+        console.log("Error " + err);
+      } else {
+        console.log("Data " + data);
+      }
+      res.render("profile.ejs", {
+        "id": data[0].ID,
+        "email": data[0].email,
+        "nickname": data[0].nickname,
+        "phone": data[0].cellphone
+      });
+    });
+  })
+
+
+app.get("/getReviews", (req, res)  => {
+    if (!req.cookies.x_auth) {
+        return res.sendFile(__dirname + '/public/login.html');
+    } else {
+    reviewModel.find().sort({ _id: -1 }).then(results => {
         res.render('timeline.ejs', { result: results })
     })
-    .catch(err => console.error(err))
+    .catch(() => console.error(error))
+    }
 })
 
 app.post("/recipe/writeReview", auth, (req, res) => {
@@ -162,6 +205,7 @@ app.post("/recipe/writeReview", auth, (req, res) => {
           console.log("Data " + data);
         }
         console.log("Insertion is successful");
+        res.send("<script>alert('Success!!');location.href='/recipe/"+req.body.RecipeID+"';</script>");
       });
 })
 

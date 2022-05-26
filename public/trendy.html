@@ -1,58 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Recify</title>
-    <link rel="stylesheet" tyep="text/css" href="style.css">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <style>
+        html {
+            height: 100vh;
+        }
+
+
+        .bg-primary {
+            /*Navbar*/
+            background-color: #22577A !important;
+            border-bottom: 5px solid #38A3A5 !important;
+        }
+
+        .navbar-brand {
+            padding-top: 0.3125rem;
+            padding-bottom: 0.3125rem;
+            margin-right: 1rem;
+            font-size: 1.25rem;
+            text-decoration: none;
+            white-space: nowrap;
+            color: #C7F9CC !important;
+        }
+
+        body {
+            background-color: #C7F9CC;
+            color: black;
+            height: 100%;
+        }
+
+        ol {
+            margin-left: 5%;
+            margin-right: 5%;
+
+        }
+
+
+        .header {
+            border-radius: 8%;
+            background-color: #C7F9CC;
+        }
+
+        .btn {
+            font-size: larger;
+            background-color: #57CC99;
+            color: #22577A;
+        }
+
+        .btn:focus {
+            background-color: #22577A;
+            color: #C7F9CC;
+        }
+
+        .list-group {
+            border: 2px solid #38A3A5;
+            font-size: medium;
+        }
+
+        .list-group-item {
+            background-color: #b7eed6;
+        }
+
+        .footer {
+            position: relative;
+            bottom: 0px;
+        }
+
+        #footer_image {
+
+            height: 100%;
+            width: 10%;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+    <link rel="stylesheet" href="css/nav.css">
 </head>
 
 <body>
     <nav>
-        <div class="logo">
-            <img class="logo_img" src="img/logo.png" onclick="location.href='index.html'">
-        </div>
-        <div class="logo2">
-            <h2>Recify</h2>
-        </div>
-        <div class="burger">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
+        <div class="navbar">
+            <img src="img/logo2.png" onclick="location.href='/'" height="10%" width="10%">
+            <a>Recify</a>
+            <input type="checkbox" id="check_box" />
+            <label for="check_box">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <div id="side_menu">
+                <ul>
+                    <li><a class="atag" href="/profile">Profile</a></li>
+                    <li><a class="atag" href="/getReviews">Recent Reviews</a></li>
+                    <li><a class="atag" href="/logout">Logout</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
-    <div>
-        <div class="category">
-            <button type="button" id="category_items" onclick="Trendy_contents_change_Today()">Today</button>
-            <button type="button" id="category_items" onclick="Trendy_contents_change_Weekly()">Weekly</button>
-            <button type="button" id="category_items" onclick="Trendy_contents_change_Monthly()">Monthly</button>
-        </div>
+
+    <div class="container-fluid header my-4 py-3 px-2">
+
+        <ul class="nav nav-pills justify-content-between">
+            <li class="nav-item">
+                <button type="button" class="btn" onclick="Trendy_contents_change_Main()">Main Course</button>
+            </li>
+            <li class="nav-item">
+                <button type="button" class="btn" onclick="Trendy_contents_change_Appetizer()">Appetizer</button>
+            </li>
+            <li class="nav-item">
+                <button type="button" class="btn" onclick="Trendy_contents_change_Dessert()">Dessert</button>
+            </li>
+        </ul>
     </div>
-    <ol id="Trendy_Food_List" onclick="location.href='recipe.html'"> 
-        <li>Kimchi Fried Rice</li>
-        <li>Curry rice</li>
-        <li>Pasta</li>
-        <li>Pizza</li>
-        <li>Coffee with Donut</li>
+
+
+
+    <ol class="list-group list-group-numbered" id="Trendy_Food_List">
     </ol>
 
-    <footer>
-        <div id="footer_containter">
-            <h5>
-                Copyright © Your Website 2022
-            </h5>
-        </div>
 
-        <form id="footerForm" action="logout" method="POST" class="logoutForm" onsubmit="DoLogoutForm__submit(this); return false;">
-            <input type="submit" class="btn" value="Log Out"/>
-            <button type="button" class="btn" onclick="location.href='/getReviews'">Reviews</button>
-          </form>
-    </footer>
-    
+
+    <div class="container align-content-end footer">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <div class="col-md-4 d-flex align-items-center">
+                <a href="/" id="footer_image" class="text-muted text-decoration-none lh-1">
+                    <img src="img/logo.png" alt="" width="80%" height="10%" class="d-inline-block align-text-top">
+                </a>
+                <span class="text">© 2022 Company, Inc</span>
+            </div>
+        </footer>
+    </div>
+
 
 </body>
 
 <script src="app.js"></script>
+
 </html>
