@@ -82,14 +82,14 @@ app.post("/doJoin", (req, res) => {
 app.post("/doLogin", (req, res) => {
     User.findOne({ ID: req.body.ID }, (err, user) => {
         if (err || !user) {
-            alert("Invalid ID!");
+            res.send("<script>alert('Invalid ID/Password.');location.href='/signup.html';</script>");
             return res.sendFile(__dirname + '/public/signup.html');
         }
         user
             .comparePassword(req.body.password)
             .then((isMatch) => {
                 if (!isMatch) {
-                    alert("Invalid Password!");
+                    res.send("<script>alert('Invalid ID/Password.');location.href='/signup.html';</script>");
                     return res.sendFile(__dirname + '/public/signup.html');
                 }
                 user
