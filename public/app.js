@@ -54,7 +54,7 @@ function setup() {
     console.log(document.cookie)
     Trendy_contents_change_Main()
     let texttest = getCookie("userNickName")
-    $("#name-goes-here2").html(texttest+"!!!")
+    $("#name-goes-here2").html(texttest+"!")
 }
 
 $(document).ready(setup)

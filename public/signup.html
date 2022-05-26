@@ -84,24 +84,23 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-primary">
     <div class="container-fluid">
-      <a class="navbar-brand"> <img src="img/logo2.png" alt="" width="10%" height="10%"
-          class="d-inline-block align-text-top">
-        Recify</a>
-      <input type="checkbox" id="check_box" />
-      <label for="check_box">
-        <span></span>
-        <span></span>
-        <span></span>
-      </label>
-      <div id="side_menu">
-        <ul>
-          <li><a class="atag" href="/profile">Profile</a></li>
-          <li><a class="atag" href="/getReviews">Recent Reviews</a></li>
-          <li><a class="atag" href="/logout">Logout</a></li>
-        </ul>
-      </div>
+        <a class="navbar-brand" onclick="location.href='/'"> <img src="img/logo2.png" alt="" width="10%" height="10%" class="d-inline-block align-text-top">
+            Recify</a>
+        <input type="checkbox" id="check_box" />
+        <label for="check_box">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <div id="side_menu">
+            <ul>
+                <li><a class="atag" href="/profile">Profile</a></li>
+                <li><a class="atag" href="/getReviews">Recent Reviews</a></li>
+                <li><a class="atag" href="/logout">Logout</a></li>
+            </ul>
+        </div>
     </div>
-  </nav>
+</nav>
 
   <form action="doJoin" method="POST" class="joinForm" onsubmit="DoJoinForm__submit(this); return false;">
 
@@ -126,14 +125,23 @@
 
 
   <div class="container align-content-end footer">
-    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-      <div class="col-md-4 d-flex align-items-center">
-        <a href="/" id="footer_image" class="text-muted text-decoration-none lh-1">
-          <img src="img/logo.png" alt="" width="80%" height="10%" class="d-inline-block align-text-top">
-        </a>
-        <span class="text">© 2022 Company, Inc</span>
-      </div>
-    </footer>
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+          <div class="col-md-4 d-flex align-items-center">
+            <a href="/" id="footer_image" class="text-muted text-decoration-none lh-1">
+                <img src="img/logo.png" alt="" width="80%" height="10%" class="d-inline-block align-text-top">
+            </a>
+            <span class="text">© 2022 Company, Inc</span>
+          </div>
+        </footer>
+    </div><div class="container align-content-end footer">
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <div class="col-md-4 d-flex align-items-center">
+          <a href="/" id="footer_image" class="text-muted text-decoration-none lh-1">
+              <img src="img/logo.png" alt="" width="80%" height="10%" class="d-inline-block align-text-top">
+          </a>
+          <span class="text">© 2022 Company, Inc</span>
+        </div>
+      </footer>
   </div>
 
 </body>
