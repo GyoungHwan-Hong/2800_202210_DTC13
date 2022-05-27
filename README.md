@@ -34,79 +34,79 @@ Our group, DTC-13, is developing a web application project, which is called Reci
 
 ## Listing of File Contents of folder
 ```
-|   .gitignore\
-|   package-lock.json\
-|   package.json\
-|   server.js\
-|   \
-+---.idea\
-|   |   vcs.xml\
-|   |   workspace.xml\
-|   |   \
-|   /---inspectionProfiles\
-|           profiles_settings.xml\
-|           Project_Default.xml\
-|\ 
-+---public\
-|   |   about_us.html\
-|   |   index.html\
-|   |   login.html\
-|   |   main.html\
-|   |   random.html\
-|   |   search_by_ingredients.html\
-|   |   search_by_recipe.html\
-|   |   signup.html\
-|   |   trendy.html\
-|   |   \
-|   +---css\
-|   |       index.css\
-|   |       login.css\
-|   |       main.css\
-|   |       nav.css\
-|   |       profile.css\
-|   |       random.css\
-|   |       recipe.css\
-|   |       search_ingredients.css\
-|   |       search_recipe.css\
-|   |       signup.css\
-|   |       timeline.css\
-|   |       trendy.css\
-|   |       \
-|   +---img\
-|   |       easteregg1.jpg\
-|   |       easteregg2.jpg\
-|   |       easteregg3.jpg\
-|   |       logo.png\
-|   |       logo2.png\
-|   |       logo3.png\
-|   |       main.png\
-|   |       main_image.jpg\
-|   |       main_image.png\
-|   |       Screenshot_1.jpg\
-|   |       Screenshot_2.jpg\
-|   |       Screenshot_3.jpg\
-|   |       second_image.jpg\
-|   |       square.png\
-|   |       third_image.jpg\
-|   |       \
-|   +---js\
-|   |       app.js\
-|   |       code.js\
-|   |       random_recipe.js\
-|   |       search_by_ingredients.js\
-|   |       search_by_recipe.js\
-|   |       trendy_recipes.js\
-|   |       \
-|   +---middleware\
-|   |       auth.js\
+|   .gitignore
+|   package-lock.json
+|   package.json
+|   server.js
+|   
++---.idea
+|   |   vcs.xml
+|   |   workspace.xml
+|   |   
+|   \---inspectionProfiles
+|           profiles_settings.xml
+|           Project_Default.xml
+|           
++---public
+|   |   about_us.html
+|   |   index.html
+|   |   login.html
+|   |   main.html
+|   |   random.html
+|   |   search_by_ingredients.html
+|   |   search_by_recipe.html
+|   |   signup.html
+|   |   trendy.html
+|   |   
+|   +---css
+|   |       index.css
+|   |       login.css
+|   |       main.css
+|   |       nav.css
+|   |       profile.css
+|   |       random.css
+|   |       recipe.css
+|   |       search_ingredients.css
+|   |       search_recipe.css
+|   |       signup.css
+|   |       timeline.css
+|   |       trendy.css
 |   |       
-|   /---models\
-|           User.js\
-|           \
-/---views\
-        profile.ejs\
-        recipe.ejs\
-        timeline.ejs\
+|   +---img
+|   |       easteregg1.jpg
+|   |       easteregg2.jpg
+|   |       easteregg3.jpg
+|   |       logo.png
+|   |       logo2.png
+|   |       logo3.png
+|   |       main.png
+|   |       main_image.jpg
+|   |       main_image.png
+|   |       Screenshot_1.jpg
+|   |       Screenshot_2.jpg
+|   |       Screenshot_3.jpg
+|   |       second_image.jpg
+|   |       square.png
+|   |       third_image.jpg
+|   |       
+|   +---js
+|   |       app.js
+|   |       code.js
+|   |       random_recipe.js
+|   |       search_by_ingredients.js
+|   |       search_by_recipe.js
+|   |       trendy_recipes.js
+|   |       
+|   +---middleware
+|   |       auth.js
+|   |       
+|   \---models
+|           User.js
+|           
+\---views
+        profile.ejs
+        recipe.ejs
+        timeline.ejs
 ```        
 ## How to install or run the project
 
