@@ -219,13 +219,17 @@ app.use('/recipe/:id', function (req, res) {
 
         https_res.on("end", function () {
             data = JSON.parse(data)
-            //console.log("Name: ", data.name)
+
+            console.log(data.extendedIngredients[0].id);
+            console.log(data.extendedIngredients[1].id);
 
             res.render("recipe.ejs", {
                 "summary": data.summary,
                 "title": data.title,
                 "food_image": data.image,
-                "food_ID": data.id
+                "food_ID": data.id,
+                "Instructions": data.instructions,
+                "Ingredients": data.extendedIngredients
             });
         })
     })
