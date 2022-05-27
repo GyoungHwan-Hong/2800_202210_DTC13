@@ -132,7 +132,7 @@ Our group, DTC-13, is developing a web application project, which is called Reci
 
 ## Contact Information
 
-GyoungGwan Hong [email](hongkh5218@gmail.com)
-Brian Kim [email](kkjin0330@gmail.com)
-Bryan Tran [email](bryant.business@hotmail.com)
+GyoungGwan Hong [email](hongkh5218@gmail.com) \
+Brian Kim [email](kkjin0330@gmail.com) \
+Bryan Tran [email](bryant.business@hotmail.com) \
 Aditya Singh Attri [email](aditya3650@yahoo.co.in)
