@@ -77,12 +77,21 @@ h3 {
 }
 
 ul {
+    display: flex;
+    flex-direction: column;
     padding: 0%;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    
 }
 
 li {
     margin-top: 3%;
     margin-bottom: 3%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .card {
