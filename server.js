@@ -140,26 +140,6 @@ const reviewSchema = new mongoose.Schema({
 const reviewModel = mongoose.model("reviews", reviewSchema);
 
 
-// app.get("/profile", (req, res)  => {
-//     if (!req.cookies.x_auth) {
-//         return res.sendFile(__dirname + '/public/login.html');
-//     } else {
-//         User.find({ ID: req.user.ID }, function (err, data) {
-//             if (err) {
-//               console.log("Error " + err);
-//             } else {
-//               console.log("Data " + data);
-//             }
-//             res.render("profile.ejs", {
-//               "id": data[0].ID,
-//               "email": data[0].email,
-//               "nickname": data[0].nickname,
-//               "phone": data[0].cellphone
-//             });
-//           });
-//     }
-// })
-
 app.get('/profile', auth, function (req, res) {
 
     //console.log("received a request for "+ req.params.city_name);
@@ -219,10 +199,6 @@ app.use('/recipe/:id', function (req, res) {
 
         https_res.on("end", function () {
             data = JSON.parse(data)
-
-            console.log(data.extendedIngredients[0].id);
-            console.log(data.extendedIngredients[1].id);
-
             res.render("recipe.ejs", {
                 "summary": data.summary,
                 "title": data.title,
