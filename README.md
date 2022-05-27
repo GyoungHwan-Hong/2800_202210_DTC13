@@ -33,7 +33,7 @@ Our group, DTC-13, is developing a web application project, which is called Reci
 * SpoonacularAPI 
 
 ## Listing of File Contents of folder
-
+```
 |   .gitignore\
 |   package-lock.json\
 |   package.json\
@@ -107,7 +107,7 @@ Our group, DTC-13, is developing a web application project, which is called Reci
         profile.ejs\
         recipe.ejs\
         timeline.ejs\
-        
+```        
 ## How to install or run the project
 
 1. Go to https://dtc13recify.herokuapp.com/.
