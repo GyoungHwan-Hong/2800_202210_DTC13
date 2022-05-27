@@ -1,0 +1,160 @@
+.bg-primary {
+    /*Navbar*/
+    background-color: #22577A !important;
+    border-bottom: 5px solid #38A3A5 !important;
+}
+
+.navbar-brand {
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    text-decoration: none;
+    white-space: nowrap;
+    color: #C7F9CC !important;
+    width: 50%
+}
+
+
+
+.card-body {
+    flex: 1 1 auto;
+    padding: 1rem 1rem;
+    background-color: #57CC99 !important;
+    /* Changes color of the cards background in main page */
+    border: 3px solid #38A3A5;
+    border-radius: 1em !important;
+    color: #22577A;
+}
+
+
+body {
+    background-color: #C7F9CC;
+    color: black;
+}
+
+
+.card {
+
+    color: black !important;
+    background-color: transparent;
+    border: 0px;
+    padding: 0px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.btn-lg {
+    background-color: rgb(136, 220, 241) !important;
+    color: #1D3461 !important;
+}
+
+
+.p-4 {
+    padding: 1em !important;
+}
+
+.main-cards {
+    display: grid;
+    grid-template-columns: 47.5% 47.5%;
+    grid-template-rows: 50% 50%;
+    column-gap: 5%;
+    row-gap: 15px;
+    width: 90%;
+    height: 50vh;
+    margin-top: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 0;
+    font-size: larger;
+}
+
+.recify {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+
+}
+
+.popular {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+}
+
+.favourites {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+}
+
+.settings {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+}
+
+.card-body {
+    border-radius: 20px !important;
+    font-size: large;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    border-radius: 20px !important;
+}
+
+.card-text {
+    font-size: medium;
+}
+
+h1 {
+    color: #22577A;
+    display: inline;
+
+}
+
+h3 {
+    margin-top: 8%;
+    font-size: large;
+}
+
+.two-buttons {
+    margin-top: 20%;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0px;
+}
+
+#footer_image {
+
+    height: 100%;
+    width: 10%;
+}
+#name-goes-here2 {
+    font-size: 28pt;
+    color: #22577A;
+    width: 100%;
+    font-weight: bold;
+
+}
+
+.divider {
+    position: relative;
+    margin-bottom: 8%;
+    height: 1px;
+}
+
+.div-transparent:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 5%;
+    right: 5%;
+    width: 90%;
+    height: 1px;
+    background-image: linear-gradient(to right, transparent, rgb(48, 49, 51), transparent);
+}
