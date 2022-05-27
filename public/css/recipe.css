@@ -99,6 +99,32 @@ h3 {
     border-radius: 6%;
 }
 
+#Instructions {
+    margin-bottom: 15%;
+    margin-left: 2%;
+    margin-right: 2%;
+    border: 2px solid #22577A;
+    background-color: #57CC99;
+    padding: 2%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    font-weight: bold;
+    border-radius: 6%;
+}
+
+#Ingredients {
+    margin-bottom: 15%;
+    margin-left: 2%;
+    margin-right: 2%;
+    border: 2px solid #22577A;
+    background-color: #57CC99;
+    padding: 2%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    font-weight: bold;
+    border-radius: 6%;
+}
+
 .footer {
     position: relative;
     bottom: 0px;
