@@ -8,29 +8,28 @@ Our group, DTC-13, is developing a web application project, which is called Reci
 
 ## Technologies used
 
-* HTML
-* CSS
-* Java Script
-* Jquery
-
-* Heroku
-* MongoDB
-* NodeJS
-    ** "bcrypt": "^5.0.1",
-    ** "bcryptjs": "^2.4.3",
-    ** "cookie-parser": "^1.4.6",
-    ** "cors": "^2.8.5",
-    ** "ejs": "^3.1.8",
-    ** "express": "^4.18.1",
-    ** "express-session": "^1.17.3",
-    ** "https": "^1.0.0",
-    ** "jsonwebtoken": "^8.5.1",
-    ** "mongoose": "^6.3.4",
-    ** "morgan": "^1.10.0",
-    ** "path": "^0.12.7",
-    ** "uuid": "^8.3.2"
-* Figma
-* SpoonacularAPI 
+- HTML
+- CSS
+- Java Script
+- Jquery
+- Heroku
+- MongoDB
+- NodeJS
+    - "bcrypt": "^5.0.1",
+    - "bcryptjs": "^2.4.3",
+    - "cookie-parser": "^1.4.6",
+    - "cors": "^2.8.5",
+    - "ejs": "^3.1.8",
+    - "express": "^4.18.1",
+    - "express-session": "^1.17.3",
+    - "https": "^1.0.0",
+    - "jsonwebtoken": "^8.5.1",
+    - "mongoose": "^6.3.4",
+    - "morgan": "^1.10.0",
+    - "path": "^0.12.7",
+    - "uuid": "^8.3.2"
+- Figma
+- SpoonacularAPI 
 
 ## Listing of File Contents of folder
 ```
