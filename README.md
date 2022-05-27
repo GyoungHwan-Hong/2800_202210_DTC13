@@ -1,6 +1,6 @@
-# Project Title
+# Recify
 
-Recify
+![logo](https://user-images.githubusercontent.com/90645441/170794416-e69af87d-b576-418b-94e9-6f595e3c6eb8.png)
 
 ## Projec Description
 
