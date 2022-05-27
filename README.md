@@ -2,7 +2,7 @@
 
 ![logo](https://user-images.githubusercontent.com/90645441/170794416-e69af87d-b576-418b-94e9-6f595e3c6eb8.png)
 
-## Projec Description
+## Project Description
 
 Our group, DTC-13, is developing a web application project, which is called Recify, that aims to help young adults come up with creative recipes to use for the ingredients that are near the expiration date.
 
